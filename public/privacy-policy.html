@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tourist Guide AI",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "Travel",
+    "description": "Generate AI-powered walking routes and get real-time travel insights with Tourist Guide AI.",
+    "url": "https://tourist-guide-ai.com",
+    "image": "https://tourist-guide-ai.com/assets/touristguide-ai-logo.webp"
+  }
+  </script>
+  
+  <meta name="description" content="Tourist Guide AI: Discover AI-generated walking routes and get real-time answers from your AI travel guide. Download free on iOS and Android.">
+  <meta name="keywords" content="Tourist Guide AI, Tourist routes, Travel guide app, tourist route generation, Guided walking tour">  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tourist Guide AI">
+  <meta property="og:title" content="Privacy Policy - Tourist Guide AI">
+  <meta property="og:description" content="Understand how Tourist Guide AI safeguards your data and privacy for AI-powered audio tours and route generation.">
+  <meta property="og:image" content="https://www.tourist-guide-ai.com/assets/tourist-guide-ai-preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://tourist-guide-ai.com/privacy-policy.html">
+  <meta property="og:type" content="website">
+
+  <title>Privacy Policy - Tourist Guide AI</title>
+  <link rel="icon" type="image/webp" href="touristguide-ai-logo.webp">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .logo-text { color:#6fc573; }
+    .hero-bg { background: #d0f2ff; padding-top: 2.5rem; padding-bottom: 1.5rem;}
+    .logo { max-width: 100px;}
+    .cta-button { background-color: #6fc573; transition: transform 0.3s ease; }
+    .footer-link { color: #04a8e8; }
+    .footer-link:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7TNBPWJ5Y5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7TNBPWJ5Y5');
+</script>
+
+<!-- JS for hamburger -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamIcon = document.getElementById('ham-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    // Toggle menu open/close
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent triggering document click
+      mobileMenu.classList.toggle('hidden');
+      hamIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking any link (so it actually navigates!)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Close when clicking outside the menu
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        hamIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    mobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+  });
+</script>
+
+<body class="bg-white">
+
+    <!-- --------- Top Bar Section -> JS for hamburger ------------------- -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-white ">
+        <div class="container mx-auto px-4 py-3 flex flex-row justify-between items-center text-center sm:text-left text-sm md:text-base">
+        
+        <!-- Left side -->
+        <div class="flex gap-3">
+
+            <a href="index.html" class="hover:scale-105 flex items-center text-xl md:text-xl font-bold transition-all gap-4 logo-text">
+            <img 
+                src="assets/touristguide-ai-logo.webp" 
+                alt="Tourist Guide AI Logo" 
+                class="w-8 h-8 md:w-10 md:h-10 object-contain"
+            > Tourist Guide AI
+            </a>
+
+        </div>
+
+        <!-- Right side LAPTOP – CTA buttons -->
+        <div class="hidden md:flex gap-3">
+
+            <!-- Text link - HOME – smooth scroll -->
+            <a href="index.html" 
+            class="hover:text-green-500 hover:scale-105 hover:font-bold font-semibold px-3 py-2
+                    transition-all duration-300 whitespace-nowrap flex items-center gap-4">
+            HOME
+            </a>
+
+            <!-- Text link - TERMS OF USE – smooth scroll -->
+            <a href="terms-of-use.html" 
+            class="hover:text-green-500 hover:scale-105 hover:font-bold font-semibold px-6 py-2
+                    transition-all duration-300 whitespace-nowrap flex items-center gap-4">
+            TERMS OF USE
+            </a>
+
+            <!-- CTA button - Android -->
+            <a href="https://play.google.com/store/apps/details?id=com.phototour.ai"
+            target="_blank" 
+            rel="noopener"
+            onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
+            class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-1 font-bold">
+            <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
+            </a>
+
+            <!-- CTA button - iOS -->
+            <a href="https://apps.apple.com/us/app/tourist-guide-ai/id6751420818"
+            target="_blank" 
+            rel="noopener"
+            onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
+            class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-1 font-bold">
+            <img src="assets/apple_logo_white.webp" alt="iOS" class="w-6 h-6 mb-1"> iOS
+            </a>
+
+        </div>
+
+        <!-- Right side MOBILE - Hamburger Menu -->
+        <button id="hamburger" class="z-50 md:hidden text-black text-3xl focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="ham-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-white hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
+        
+        <a href="index.html" class="block text-black hover:text-green-500 hover:scale-105 hover:font-bold font-semibold transition-all">HOME</a>
+
+        <a href="terms-of-use.html" class="block text-black hover:text-green-500 hover:scale-105 hover:font-bold font-semibold transition-all">TERMS OF USE</a>
+
+        <div class="flex flex-row justify-left items-center gap-4">
+
+            <a href="https://play.google.com/store/apps/details?id=com.phototour.ai" target="_blank" rel="noopener"
+            onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
+            class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-2 font-bold">
+            <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
+            </a>
+
+            <a href="https://apps.apple.com/us/app/tourist-guide-ai/id6751420818" target="_blank" rel="noopener"
+            onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
+            class="cta-button text-white px-7 py-2 rounded-lg hover:scale-105 transition flex items-center gap-2 font-bold">
+            <img src="assets/apple_logo_white.webp" alt="iOS" class="w-5 h-5"> iOS
+            </a>
+
+        </div>
+        
+        
+
+    </div>
+    <!-- ----------------------------------------------------------------- -->
+
+
+
+
+    <!-- Privacy Policy -->
+    <section class="bg-gray-50 py-10 pt-24">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-8" style="color: #04a8e8">Privacy Policy</h1>
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Introduction</h2>
+            <p class="text-lg mb-4">Our privacy policy will help you understand what information we collect at Tourist Guide AI, how Tourist Guide AI uses it, and what choices you have. Tourist Guide AI built the Tourist Guide AI app as a free app. This SERVICE is provided by Tourist Guide AI at no cost and is intended for use as is.</p>
+            <p class="text-lg mb-4">If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.</p>
+            <p class="text-lg mb-4">The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible in our website, unless otherwise defined in this Privacy Policy.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Information Collection and Use</h2>
+            <p class="text-lg mb-4">For a better experience while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to users name, email address, gender, location, pictures. The information that we request will be retained by us and used as described in this privacy policy.</p>
+            <p class="text-lg mb-4">The app does use third party services that may collect information used to identify you.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Cookies</h2>
+            <p class="text-lg mb-4">Cookies are files with small amount of data that is commonly used an anonymous unique identifier. These are sent to your browser from the website that you visit and are stored on your devices’s internal memory.</p>
+            <p class="text-lg mb-4">This Services does not uses these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collection information and to improve their services. You have the option to either accept or refuse these cookies, and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Location Information</h2>
+            <p class="text-lg mb-4">Some of the services may use location information transmitted from users' mobile phones. We only use this information within the scope necessary for the designated service.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Device Information</h2>
+            <p class="text-lg mb-4">We collect information from your device in some cases. The information will be utilized for the provision of better service and to prevent fraudulent acts. Additionally, such information will not include that which will identify the individual user.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Service Providers</h2>
+            <p class="text-lg mb-4">We may employ third-party companies and individuals due to the following reasons:</p>
+            <ul class="list-disc list-inside mb-8 text-lg space-y-2">
+                <li>To facilitate our Service;</li>
+                <li>To provide the Service on our behalf;</li>
+                <li>To perform Service-related services; </li>
+                <li>To assist us in analyzing how our Service is used.</li>
+            </ul>
+            <p class="text-lg mb-4">We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Security</h2>
+            <p class="text-lg mb-4">We value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Children’s Privacy</h2>
+            <p class="text-lg mb-4">This Services do not address anyone under the age of 13. We do not knowingly collect personal identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to do necessary actions.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Changes to This Privacy Policy</h2>
+            <p class="text-lg mb-4">We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.</p>
+
+            <h2 class="text-2xl font-semibold mb-4" style="color: #04a8e8">Contact Us</h2>
+            <p class="text-lg mb-4">If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us.</p>
+            <p class="text-lg mb-4">Contact Information:<br>Email: <a href="mailto:support@tourist-guide-ai.com" class="hover:underline">support@tourist-guide-ai.com</a></p>
+        </div>
+    </section>
+
+
+
+    <!-- ----------------------------------------------------------------- -->
+    <!-- Footer Section -->
+    <footer class="bg-gray-50 px-5 md:px-20 pb-12">
+
+        <!-- Horizontal Line -->
+        <hr class="border-gray-300">
+
+        <!-- Copyright -->
+        <div class="pt-10 text-center text-gray-600 text-sm">
+            © 2025 Tourist Guide AI. All Rights Reserved
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

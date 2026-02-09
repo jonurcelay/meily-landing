@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.phototour.ai",
+      "sha256_cert_fingerprints": [
+        "10:25:7A:92:20:A1:1B:32:A2:AB:45:70:A8:40:9B:08:E1:A2:D7:AB:73:BF:A3:80:B7:1C:C9:30:14:53:4D:54",
+        "A6:78:F2:71:54:49:FC:48:1D:EE:B8:4D:B9:D2:C8:94:48:0C:84:66:C2:58:A2:E2:FA:4A:4F:DC:E4:6C:4D:58"
+      ]
+    }
+  }
+]
