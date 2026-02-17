@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "phototour-ai",
+    "default": "meily-app",
     "meily": "meily-app"
   },
   "targets": {},
