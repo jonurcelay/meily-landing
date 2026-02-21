@@ -34,18 +34,6 @@
   }
   </script>
 
-  <!-- VideoObject Schema  -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Meily Trips Demo",
-    "description": "Meily Trips: Create full travel itineraries, or scan videos from social media to create a trip.",
-    "thumbnailUrl": "https://meily.app/assets/meily-preview.webp",
-    "uploadDate": "2025-10-17",
-    "contentUrl": "https://meily.app/assets/tourist-guide-ai-demo.mp4"
-  }
-  </script>
   
   <meta name="description" content="Meily Trips: Create full travel itineraries, or scan videos from social media to create a trip. Download free on iOS and Android.">
   <meta name="keywords" content="Meily Trips, trip app, travel app, plan a trip app, best travel app">
@@ -68,13 +56,8 @@
       scroll-behavior: smooth !important;
     }
     body { font-family: 'Poppins', sans-serif; }
-    .logo-text { color:#6fc573; }
+    .logo-text { color: #04a8e8; } /* #6fc573 */
     .hero-bg { background: #d0f2ff; padding-top: 3.5rem; padding-bottom: 1.5rem; background-position: center;} 
-    video {
-      display: block; /* Ensures video is block-level for centering */
-      margin-left: auto;
-      margin-right: auto;
-    }
     .screenshot { border-radius: 15px;}
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
@@ -84,6 +67,7 @@
     .logo { max-width: 100px;}
     .footer-link { color: #04a8e8; }
     .footer-link:hover { text-decoration: underline; }
+    .map-top { background: white; }
   </style>
 
 </head>
@@ -142,8 +126,26 @@
 
 <body class="bg-white">
 
-  <!-- --------- Top Bar Section -> JS for hamburger ------------------- -->
-  <div class="fixed top-0 left-0 right-0 z-50 bg-white ">
+  <!-- Background with world map + blue overlay -->
+  <div class="fixed inset-0 z-0">
+    <!-- World map as background -->
+    <div 
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('assets/index/background_map.webp');"
+    ></div>
+    
+    <!-- Semi-transparent blue layer on top -->
+    <div class="absolute inset-0 map-top opacity-70"></div>
+  </div>
+
+
+
+  <!-- ----------------------------------------------------------------- -->
+
+
+
+  <!--  Top Bar Section -> JS for hamburger  -->
+  <div class="fixed top-0 left-0 right-0 z-50 bg-blue-50 bg-opacity-70 backdrop-blur-lg">
     <div class="container mx-auto px-4 py-3 flex flex-row justify-between items-center text-center sm:text-left text-sm md:text-base">
       
       <!-- Left side -->
@@ -181,7 +183,7 @@
           target="_blank" 
           rel="noopener"
           onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
-          class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-1 font-bold">
+          class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
           <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
         </a>
 
@@ -190,7 +192,7 @@
           target="_blank" 
           rel="noopener"
           onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
-          class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-1 font-bold">
+          class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
           <img src="assets/apple_logo_black.webp" alt="iOS" class="w-6 h-6 mb-1"> iOS
         </a>
 
@@ -210,7 +212,7 @@
   </div>
   
   <!-- Mobile menu (hidden by default) -->
-  <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-white hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
+  <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-blue-50 bg-opacity-70 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
     
     <a href="#how-it-works" class="block text-black hover:text-green-500 hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
@@ -220,13 +222,13 @@
 
         <a href="GOOGLE-PLAY-LINK" target="_blank" rel="noopener"
           onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
-          class="cta-button text-white px-5 py-2 rounded-lg hover:scale-105 transition flex items-center gap-2 font-bold">
+          class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
           <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
         </a>
 
         <a href="APP-STORE-LINK" target="_blank" rel="noopener"
           onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
-          class="cta-button text-white px-7 py-2 rounded-lg hover:scale-105 transition flex items-center gap-2 font-bold">
+          class="cta-button text-black px-7 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
           <img src="assets/apple_logo_black.webp" alt="iOS" class="w-5 h-5"> iOS
         </a>
 
@@ -235,66 +237,41 @@
     
 
   </div>
+
+
   <!-- ----------------------------------------------------------------- -->
 
+  
 
-  <!-- Temporary Cooming soon + Description for SEO -->
-  <section class="hero-bg py-20 px-20">
-    <div class="text-center md:text-center">
-      <h1 class="text-2xl md:text-6xl font-bold mt-20 mb-1" style="color: #04a8e8">Meily Trips - Coming soon</h1>
+  <!-- Content -->
+  <section class="relative py-10 px-20">
+
+    <!-- Title -->
+    <div class="text-center md:text-center px-30 pt-30 text-white">
+      <h1 class="text-2xl md:text-6xl font-bold mb-3" style="color: #04a8e8">You save the stops</h1>
+      <h1 class="text-2xl md:text-6xl font-bold mb-3" style="color: #04a8e8">We'll handle the rest</h1>
+      <h3 class="text-lg md:text-2xl font-bold" style="color: #04a8e8">Turn saved posts into trip itineraries and live guides</h3>
     </div>
 
-    <div class="text-center md:text-center">
-      <h2 class="text-xl md:text-2xl font-bold mt-12 mb-1" style="color: #04a8e8">Scan Posts or Use AI to Create Trips</h2>
+    <!-- Main image -->
+    <div class="text-center px-60 py-10">
+      <img src="assets/index/main.png" alt="Meily Trips" loading="lazy">
     </div>
 
-    <div class="text-center md:text-center">
-      <p class="mt-6 mb-4" style="color: #04a8e8">
-        Create and save your trips with Meily Trips. Scan videos from social media to create a trip, or just let the app recommend your next stops.
-        During your trip, chat with your custom guide for local recommendations. Simply snap a picture of something like a monument or a building, and your guide will provide you instant insights. 
-      </p>
-    </div>
+    <!-- Feature 1 -->
+
+    <!-- Feature 2 -->
+
+    <!-- Feature 3 -->
+
+    <!-- Feature 4 -->
+
+    <!-- Feature 5 -->
+
   </section>
+
   
   <!--
-
-  <!- Hero Video Section ->
-  <section class="hero-bg py-10">
-    <div class="container mx-auto flex flex-col justify-center items-center">
-      <video autoplay muted loop playsinline 
-        class="w-full full-w-md rounded-lg" 
-        poster="assets/meily-preview.webp" 
-        preload="metadata">
-        <source src="assets/tourist-guide-ai-video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
-
-  <script>
-    // Fix autoplay on iOS & modern Chrome
-    document.addEventListener('DOMContentLoaded', function() {
-      const video = document.querySelector('video');
-      
-      // Critical: playsinline + muted + poster
-      video.muted = true;
-      video.playsInline = true;
-
-      // Start playing (even if silent)
-      video.play().catch(() => {
-        // If autoplay fails, show poster + play button overlay
-        video.style.background = '#000 url("assets/meily-preview.webp"") center/cover';
-        video.controls = true;
-      });
-
-      // Unmute + full play on first tap/click
-      document.body.addEventListener('click', function unmute() {
-        video.muted = false;
-        video.play();
-        document.body.removeEventListener('click', unmute);
-      }, { once: true });
-    });
-  </script>
 
   <!- Showcase Section Map ->
   <section id="how-it-works" class="scroll-mt-4 pt-10 md:pt-20">
@@ -332,47 +309,6 @@
         <div class="text-center">
           <img src="assets/chat_ask.webp" alt="Meily Trips ask questions to your AI travel guide" class="screenshot mx-auto m-2" loading="lazy">
         </div>
-      </div>
-    </div>
-  </section>
-
-  -->
-
-  <!--
-
-  <!- Photo Belt Section ->
-  <section class="py-6" style="background: #d0f2ff">
-
-    <div class="grid grid-cols-5 md:grid-cols-10 px-5 md:px-15">
-      <div class="text-center">
-        <img src="assets/belt/1.webp" alt="Meily Trips in London" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/2.webp" alt="Meily Trips in Rome" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/3.webp" alt="Meily Trips in Paris" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/4.webp" alt="Meily Trips in San Francisco" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/5.webp" alt="Meily Trips in Egipt" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/6.webp" alt="Meily Trips in Bangkok" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/7.webp" alt="Meily Trips in New York" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/8.webp" alt="Meily Trips in Shangai" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/9.webp" alt="Meily Trips in Barcelona" loading="lazy">
-      </div>
-      <div class="text-center">
-        <img src="assets/belt/10.webp" alt="Meily Trips in Norway" loading="lazy">
       </div>
     </div>
   </section>
@@ -514,9 +450,9 @@
   <!-- ----------------------------------------------------- -->
 
   <!-- Call To Action (CTA) Section -->
-  <section id="download" class="py-20 text-white" style="background-color: #04a8e8">
+  <section id="download" class="relative py-20 text-white">
     <div class="container mx-auto px-7 text-center">
-      <h3 class="text-4xl md:text-5xl mb-12 font-bold">Ready to plan your next trip?</h3>
+      <h3 class="text-4xl md:text-5xl mb-12 font-bold" style="color: #04a8e8">Ready to plan your next trip?</h3>
 
       <div class="flex flex-col md:flex-row justify-center gap-4 mx-auto">
 
@@ -553,7 +489,7 @@
   </section>
 
   <!-- Footer Section -->
-  <footer class="bg-gray-50 px-5 md:px-20 py-12">
+  <footer class="relative bg-white px-5 md:px-20 py-12 bg-opacity-50">
     <div class="container mx-auto px-6 max-w-7xl text-l">
 
       <!-- 4 Columns Grid (1 column mobile) -->
