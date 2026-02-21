@@ -30,7 +30,7 @@
     "applicationCategory": "Travel",
     "description": "Meily Trips: Create full travel itineraries, or scan videos from social media to create a trip.",
     "url": "https://meily.app",
-    "image": "https://meily.app/assets/meily-logo.webp"
+    "image": "https://meily.app/assets/meily-logo-square.webp"
   }
   </script>
 
@@ -53,7 +53,7 @@
   <meta name="author" content="Meily Trips">
   <meta property="og:title" content="Meily Trips">
   <meta property="og:description" content="Meily Trips: Create full travel itineraries, or scan videos from social media to create a trip. Download free on iOS and Android.">
-  <meta property="og:image" content="https://meily.app/assets/meily-logo.webp">
+  <meta property="og:image" content="https://meily.app/assets/meily-logo-square.webp">
   <meta property="og:url" content="https://meily.app">
   <meta property="og:type" content="website">
 
@@ -78,7 +78,8 @@
     .screenshot { border-radius: 15px;}
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    .cta-button { background-color: #6fc573; transition: transform 0.3s ease; }
+    /*.cta-button { background-color: #6fc573; transition: transform 0.3s ease; } */
+    .cta-button { background-color: white; transition: transform 0.3s ease; }
     .cta-button:hover { transform: scale(1.05); }
     .logo { max-width: 100px;}
     .footer-link { color: #04a8e8; }
@@ -150,7 +151,7 @@
 
         <a href="index.html" class="hover:scale-105 flex items-center text-xl md:text-xl font-bold transition-all gap-4 logo-text">
           <img 
-            src="assets/meily-logo.webp" 
+            src="assets/meily-logo-square.webp" 
             alt="Meily Trips Logo" 
             class="w-8 h-8 md:w-10 md:h-10 object-contain"
           > Meily Trips
@@ -337,7 +338,9 @@
 
   -->
 
-  <!-- Photo Belt Section -->
+  <!--
+
+  <!- Photo Belt Section ->
   <section class="py-6" style="background: #d0f2ff">
 
     <div class="grid grid-cols-5 md:grid-cols-10 px-5 md:px-15">
@@ -373,6 +376,8 @@
       </div>
     </div>
   </section>
+
+  -->
 
   <!--
 
@@ -520,34 +525,28 @@
         <a href="GOOGLE-PLAY-LINK"
           target="_blank" 
           rel="noopener"
-          class="cta-button inline-flex items-center bg-green-500 text-white p-6 rounded-lg hover:scale-105 transition-transform"
+          class="cta-button inline-flex items-center text-black px-8 py-3 rounded-full hover:scale-105 transition-transform"
           onclick="gtag('event', 'store_click', {
             'store': 'google_play',
             'location': 'cta_section',
             'button_text': 'Google Play'
           });">
-          <img src="assets/playstore_logo.webp" alt="Android Logo" class="w-10 h-10 mr-4">
-          <div class="flex flex-col text-left">
-            <span class="text-sm">Get it on</span>
-            <span class="text-xl font-semibold">Google Play</span>
-          </div>
+          <img src="assets/playstore_logo.webp" alt="Android Logo" class="w-6 h-6 mr-4">
+          <span class="text-left text-lg font-semibold">Get it for Android</span>
         </a>
 
         <!-- https://apps.apple.com/us/app/tourist-guide-ai/id6751420818 -->
         <a href=""
           target="_blank" 
           rel="noopener"
-          class="cta-button inline-flex items-center bg-green-500 text-white p-6 rounded-lg hover:scale-105 transition-transform"
+          class="cta-button inline-flex items-center text-black px-8 py-3 rounded-full hover:scale-105 transition-transform"
           onclick="gtag('event', 'store_click', {
             'store': 'app_store',
             'location': 'cta_section',
             'button_text': 'App Store'
           });">
-          <img src="assets/apple_logo_white.webp" alt="Apple Logo" class="w-12 h-12 mr-4 mb-1">
-          <div class="flex flex-col text-left">
-            <span class="text-sm">Get it on the</span>
-            <span class="text-xl font-semibold">App Store</span>
-          </div>
+          <img src="assets/apple_logo_black.webp" alt="Apple Logo" class="w-8 h-8 mr-4 mb-1">
+          <span class="text-left text-lg font-semibold">Download for iOS</span>
         </a>
         
       </div>
