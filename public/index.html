@@ -131,7 +131,7 @@
     <!-- World map as background -->
     <div 
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/index/map_3.png');"
+      style="background-image: url('assets/index/background.webp');"
     ></div>
     
     <!-- Semi-transparent blue layer on top -->
@@ -212,7 +212,7 @@
   </div>
   
   <!-- Mobile menu (hidden by default) -->
-  <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-blue-50 bg-opacity-30 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
+  <div id="mobile-menu" class=" z-10 fixed left-0 right-0 top-0 bg-blue-50 bg-opacity-50 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10 pt-20">
     
     <a href="#how-it-works" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
@@ -244,40 +244,40 @@
   
 
   <!-- Content -->
-  <section class="relative pt-20 py-10 px-40">
+  <section class="relative pt-20 px-10 md:px-40">
 
     <!-- Title -->
-    <div class="text-center md:text-center px-30 pt-20 text-white">
-      <h1 class="text-2xl md:text-6xl font-bold mb-3">Scan posts, create trips,</h1>
-      <h1 class="text-2xl md:text-6xl font-bold mb-3">& travel with your guides</h1>
+    <div class="text-center md:text-center md:px-30 pt-10 md:pt-20 text-white">
+      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Scan posts, create trips,</h1>
+      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">& travel with your guides</h1>
     </div>
 
     <!-- Main image -->
-    <div class="text-center px-40 py-10">
-      <img src="assets/index/main_image.png" alt="Meily Trips" loading="lazy">
+    <div class="text-center md:px-40 py-10">
+      <img src="assets/index/main_image.webp" alt="Meily Trips" loading="lazy">
     </div>
 
     <!-- Container Feature 1: Scan posts -->
-    <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20">
-      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
+    <div class="md:px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20" id="how-it-works">
+      <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
         
         <!-- Left: Image -->
         <div class="flex justify-center">
           <img 
-            src="assets/index/feature_1_posts.png" 
+            src="assets/index/feature_1_posts.webp" 
             alt="Scan Posts & Create Trips" 
-            class="w-full max-w-lg object-cover"
+            class="w-48 md:w-full md:max-w-lg object-cover"
             loading="lazy"
           >
         </div>
 
         <!-- Right: Text -->
-        <div class="text-white space-y-4 md:space-y-6">
-          <h3 class="text-3xl md:text-4xl font-bold text-white">
+        <div class="text-white space-y-1 md:space-y-6">
+          <h3 class="text-xl md:text-4xl font-bold text-white">
             Scan Posts & Create Trips
           </h3>
-          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
+          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
             Import posts from Instagram, TikTok, or YouTube. Meily Trips analyzes the stops from the content and builds the itinerary for you.
           </p>
         </div>
@@ -286,26 +286,26 @@
     </div>
 
     <!-- Container Feature 2: Create Trips with AI -->
-     <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+     <div class="md:px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
          bg-white bg-opacity-20">
-      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
+      <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
 
         <!-- Left: Text -->
-        <div class="text-white space-y-4 md:space-y-6">
-          <h3 class="text-3xl md:text-4xl font-bold text-white">
+        <div class="text-white space-y-1 md:space-y-6 order-2 md:order-1">
+          <h3 class="text-xl md:text-4xl font-bold text-white">
             Create Trips in One Tap
           </h3>
-          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
-            Tell Meily Trips where you want to go, how many days you have, and your trip preferences - it will create a full itinerary for you in seconds.
+          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
+            Choose where you want to go, how many days you have, and your trip preferences - Meily Trips will create a full itinerary for you.
           </p>
         </div>
 
         <!-- Right: Image -->
-        <div class="flex justify-center">
+        <div class="flex justify-center order-1 md:order-2">
           <img 
-            src="assets/index/feature_2_ai.png" 
+            src="assets/index/feature_2_ai.webp" 
             alt="Create Trips with AI" 
-            class="w-full max-w-lg object-cover"
+            class="w-48 md:w-full md:max-w-lg object-cover"
             loading="lazy"
           >
         </div>
@@ -314,155 +314,106 @@
     </div>
 
     <!-- Container Feature 3: Travel with Your Guides -->
-     <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+     <div class="md:px-10 rounded-3xl overflow-hidden backdrop-blur-2xl 
          bg-white bg-opacity-20">
-      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
+      <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
         
         <!-- Left: Image -->
         <div class="flex justify-center">
           <img 
-            src="assets/index/feature_3_guides.png" 
+            src="assets/index/feature_3_guides.webp" 
             alt="Travel with Your Guides" 
-            class="w-full max-w-lg object-cover"
+            class="w-48 md:w-full md:max-w-lg object-cover"
             loading="lazy"
           >
         </div>
 
         <!-- Right: Text -->
-        <div class="text-white space-y-4 md:space-y-6">
-          <h3 class="text-3xl md:text-4xl font-bold text-white">
+        <div class="text-white space-y-1 md:space-y-6">
+          <h3 class="text-xl md:text-4xl font-bold text-white">
             Explore with Your Guides
           </h3>
-          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
-            Take pictures, ask questions, and get real-time voice answers from your AI-powered tourist guides. It’s literally like having a local expert for each destination in your pocket.
+          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
+            Send pictures, ask questions, and get real-time voice answers from your AI-powered tourist guides. Have a local expert for each of your destinations.
           </p>
         </div>
 
       </div>
     </div>
 
-    <!-- All your trips in one place -->
-
   </section>
 
-  
-  <!--
+  <!-- Reviews Section -->
+  <section id="reviews" class="relative scroll-mt-24 px-5 md:px-10 pt-20">
+    <div class="container mx-auto px-6 max-w-7xl text-white">
 
-  <!- Showcase Section Map ->
-  <section id="how-it-works" class="scroll-mt-4 pt-10 md:pt-20">
-    <div class="container mx-auto m-2 px-5 md:px-20">
-      <div class="text-center md:text-center">
-        <h2 class="text-2xl md:text-4xl font-bold mt-2 mb-1" style="color: #04a8e8">Generate tourist routes in your next destination, it works anywhere in the world</h2>
-      </div>
-      <div class="grid grid-cols-3 md:grid-cols-3 gap-1 md:gap-10 md:px-20">
-        <div class="text-center">
-          <img src="assets/map_generate.webp" alt="Meily Trips generate route" class="screenshot mx-auto m-2" loading="lazy" >
-        </div>
-        <div class="text-center">
-          <img src="assets/map_route.webp" alt="Meily Trips follow generated route" class="screenshot mx-auto m-2" loading="lazy">
-        </div>
-        <div class="text-center">
-          <img src="assets/map_modify.webp" alt="Meily Trips modify generated route" class="screenshot mx-auto m-2" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!- Showcase Section Chat ->
-  <section class=" py-10 md:py-20">
-    <div class="container mx-auto m-2 mb-2 px-5 md:px-20">
-      <div class="text-center md:text-center">
-        <h2 class="text-2xl md:text-4xl font-bold mt-2 mb-1" style="color: #6fc573">Take pictures, ask questions and listen to your AI-powered tourist guide</h2>
-      </div>
-      <div class="grid grid-cols-3 md:grid-cols-3 gap-1 md:gap-10 md:px-20">
-        <div class="text-center">
-          <img src="assets/chat_camera.webp" alt="Meily Trips capture a photo for your AI travel guide" class="screenshot mx-auto m-2" loading="lazy" >
-        </div>
-        <div class="text-center">
-          <img src="assets/chat_speak.webp" alt="Meily Trips get real-time answers from your AI travel guide" class="screenshot mx-auto m-2" loading="lazy" >
-        </div>
-        <div class="text-center">
-          <img src="assets/chat_ask.webp" alt="Meily Trips ask questions to your AI travel guide" class="screenshot mx-auto m-2" loading="lazy">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  -->
-
-  <!--
-
-  <!- Reviews Section ->
-  <section id="reviews" class="scroll-mt-24 px-5 md:px-10 py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-7xl">
-
-      <!- Title & Subtitle ->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      <!-- Title & Subtitle -->
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Our Users Love Meily Trips
         </h2>
-        <p class="text-l md:text-xl text-gray-700 max-w-4xl mx-auto">
+        <p class="text-l md:text-xl max-w-4xl mx-auto">
           Our users explore the world cheaply and effortlessly with Meily Trips!
         </p>
       </div>
 
-      <!- 4 Review Cards – responsive grid for laptop ->
+      <!-- 4 Review Cards – responsive grid for laptop -->
       <div class="hidden md:flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
-        <!- Review 1 ->
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Saved me $300 in Hanoi!</h3>
-          <p class="text-gray-600 leading-relaxed">
+        <!-- Review 1 -->
+        <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+          <h3 class="text-xl font-semibold mb-3">Saved me $300 in Hanoi!</h3>
+          <p class="leading-relaxed">
             "I was lost and overpaying for everything. This AI built me a perfect 3-day route under $1/day. Mind blown!"
           </p>
           <div class="mt-6">
-            <p class="font-bold text-gray-800">Sarah M.</p>
-            <p class="text-sm text-gray-500">Traveled to Vietnam</p>
+            <p class="font-bold">Sarah M.</p>
+            <p class="text-sm">Traveled to Vietnam</p>
           </div>
           <div class="flex mb-4">
             <span class="text-yellow-500 text-2xl">★★★★★</span>
           </div>
         </div>
 
-        <!- Review 2 ->
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Better than a human guide!</h3>
-          <p class="text-gray-600 leading-relaxed">
+        <!-- Review 2 -->
+        <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+          <h3 class="text-xl font-semibold mb-3">Better than a human guide!</h3>
+          <p class="leading-relaxed">
             "Asked it for hidden spots in Bangkok — found places even locals didn’t know. Worth every penny."
           </p>
           <div class="mt-6">
-            <p class="font-bold text-gray-800">James K.</p>
-            <p class="text-sm text-gray-500">Solo trip to Thailand</p>
+            <p class="font-bold">James K.</p>
+            <p class="text-sm">Solo trip to Thailand</p>
           </div>
           <div class="flex mb-4">
             <span class="text-yellow-500 text-2xl">★★★★★</span>
           </div>
         </div>
 
-        <!- Review 3 ->
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">My travel best friend</h3>
-          <p class="text-gray-600 leading-relaxed">
+        <!-- Review 3 -->
+        <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+          <h3 class="text-xl font-semibold mb-3">My travel best friend</h3>
+          <p class="leading-relaxed">
             "I just take photos and ask 'what’s this?' — instant info, translations, prices. Feels like magic."
           </p>
           <div class="mt-6">
-            <p class="font-bold text-gray-800">Lucía R.</p>
-            <p class="text-sm text-gray-500">Backpacking Europe</p>
+            <p class="font-bold">Lucía R.</p>
+            <p class="text-sm">Backpacking Europe</p>
           </div>
           <div class="flex mb-4">
             <span class="text-yellow-500 text-2xl">★★★★★</span>
           </div>
         </div>
 
-        <!- Review 4 ->
-        <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
-          <h3 class="text-xl font-semibold text-gray-800 mb-3">Best $9.99 I ever spent</h3>
-          <p class="text-gray-600 leading-relaxed">
+        <!-- Review 4 -->
+        <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
+          <h3 class="text-xl font-semibold mb-3">Best $9.99 I ever spent</h3>
+          <p class="leading-relaxed">
             "Paid once and used it in 4 countries. Already saved 10× the cost. Everyone needs this app."
           </p>
           <div class="mt-6">
-            <p class="font-bold text-gray-800">Alex T.</p>
-            <p class="text-sm text-gray-500">Digital Nomad SE Asia</p>
+            <p class="font-bold">Alex T.</p>
+            <p class="text-sm">Digital Nomad SE Asia</p>
           </div>
           <div class="flex mb-4">
             <span class="text-yellow-500 text-2xl">★★★★★</span>
@@ -471,44 +422,44 @@
 
       </div>
 
-      <!- 4 Review Card - Swipeable Carousel for mobile ->
+      <!-- 4 Review Card - Swipeable Carousel for mobile -->
       <div class="md:hidden -mx-10">
         <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
 
-          <!- Same 4 cards, but now inside carousel ->
+          <!-- Same 4 cards, but now inside carousel -->
           <div class="w-full flex-shrink-0 snap-center">
-            <div class="bg-white rounded-2xl shadow-lg p-8 h-full">
-              <h3 class="text-xl font-semibold text-gray-800 mb-3">Saved me $300 in Hanoi!</h3>
-              <p class="text-gray-600">"I was lost and overpaying for everything. This AI built me a perfect 3-day route under $40/day. Mind blown!"</p>
-              <div class="mt-6"><p class="font-bold text-gray-800">Sarah M.</p><p class="text-sm text-gray-500">Vietnam</p></div>
-              <div class="flex mb-4"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
+            <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-3">Saved me $300 in Hanoi!</h3>
+              <p>"I was lost and overpaying for everything. This AI built me a perfect 3-day route under $40/day. Mind blown!"</p>
+              <div class="mt-6"><p class="font-bold">Sarah M.</p><p class="text-sm">Vietnam</p></div>
+              <div class="flex"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
             </div>
           </div>
 
           <div class="w-full flex-shrink-0 snap-center">
-            <div class="bg-white rounded-2xl shadow-lg p-8 h-full">
-              <h3 class="text-xl font-semibold text-gray-800 mb-3">Better than a human guide!</h3>
-              <p class="text-gray-600 leading-relaxed">"Asked it for hidden spots in Bangkok — found places even locals didn’t know. Worth every penny."</p>
-              <div class="mt-6"><p class="font-bold text-gray-800">James K.</p><p class="text-sm text-gray-500">Thailand</p></div>
-              <div class="flex mb-4"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
+            <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-3">Better than a human guide!</h3>
+              <p class="leading-relaxed">"Asked it for hidden spots in Bangkok — found places even locals didn’t know. Worth every penny."</p>
+              <div class="mt-6"><p class="font-bold">James K.</p><p class="text-sm">Thailand</p></div>
+              <div class="flex"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
             </div>
           </div>
 
           <div class="w-full flex-shrink-0 snap-center">
-            <div class="bg-white rounded-2xl shadow-lg p-8 h-full">
-              <h3 class="text-xl font-semibold text-gray-800 mb-3">My travel best friend</h3>
-              <p class="text-gray-600 leading-relaxed">"I just take photos and ask 'what’s this?' — instant info, translations, prices. Feels like magic."</p>
-              <div class="mt-6"><p class="font-bold text-gray-800">Lucía R.</p><p class="text-sm text-gray-500">Europe</p></div>
-              <div class="flex mb-4"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
+            <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-3">My travel best friend</h3>
+              <p class="leading-relaxed">"I just take photos and ask 'what’s this?' — instant info, translations, prices. Feels like magic."</p>
+              <div class="mt-6"><p class="font-bold">Lucía R.</p><p class="text-sm">Europe</p></div>
+              <div class="flex"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
             </div>
           </div>
 
           <div class="w-full flex-shrink-0 snap-center">
-            <div class="bg-white rounded-2xl shadow-lg p-8 h-full">
-              <h3 class="text-xl font-semibold text-gray-800 mb-3">Best $9.99 I ever spent</h3>
-              <p class="text-gray-600 leading-relaxed">"Paid once and used it in 4 countries. Already saved 10× the cost. Everyone needs this app."</p>
-              <div class="mt-6"><p class="font-bold text-gray-800">Alex T.</p><p class="text-sm text-gray-500">SE Asia</p></div>
-              <div class="flex mb-4"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
+            <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 h-full">
+              <h3 class="text-xl font-semibold mb-3">Best $9.99 I ever spent</h3>
+              <p class="leading-relaxed">"Paid once and used it in 4 countries. Already saved 10× the cost. Everyone needs this app."</p>
+              <div class="mt-6"><p class="font-bold">Alex T.</p><p class="text-sm">SE Asia</p></div>
+              <div class="flex"><span class="text-yellow-500 text-2xl">★★★★★</span></div>
             </div>
           </div>
         </div>
@@ -517,8 +468,6 @@
 
     </div>
   </section>
-
-  -->
 
 
 
@@ -535,7 +484,7 @@
         <a href="GOOGLE-PLAY-LINK"
           target="_blank" 
           rel="noopener"
-          class="cta-button inline-flex items-center text-black px-8 py-3 rounded-full hover:scale-105 transition-transform"
+          class="cta-button inline-flex items-center text-black px-8 py-5 md:py-3 rounded-full hover:scale-105 transition-transform"
           onclick="gtag('event', 'store_click', {
             'store': 'google_play',
             'location': 'cta_section',
@@ -549,13 +498,13 @@
         <a href=""
           target="_blank" 
           rel="noopener"
-          class="cta-button inline-flex items-center text-black px-8 py-3 rounded-full hover:scale-105 transition-transform"
+          class="cta-button inline-flex items-center text-black px-8 py-5 md:py-3 rounded-full hover:scale-105 transition-transform"
           onclick="gtag('event', 'store_click', {
             'store': 'app_store',
             'location': 'cta_section',
             'button_text': 'App Store'
           });">
-          <img src="assets/apple_logo_black.webp" alt="Apple Logo" class="w-8 h-8 mr-4 mb-1">
+          <img src="assets/apple_logo_black.webp" alt="Apple Logo" class="w-6 md:w-8 h-6 md:h-8 mr-4 mb-1">
           <span class="text-left text-lg font-semibold">Download iOS App</span>
         </a>
         
@@ -648,7 +597,7 @@
 
       <!-- Copyright -->
       <div class="text-left text-white text-sm">
-        © 2025 Meily Trips. All Rights Reserved
+        © 2026 Meily Trips. All Rights Reserved
       </div>
 
     </div>
