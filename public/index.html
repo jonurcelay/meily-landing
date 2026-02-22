@@ -56,7 +56,7 @@
       scroll-behavior: smooth !important;
     }
     body { font-family: 'Poppins', sans-serif; }
-    .logo-text { color: #04a8e8; } /* #6fc573 */
+    .logo-text { color: white; } /* green: #6fc573 / blue: #04a8e8 */
     .hero-bg { background: #d0f2ff; padding-top: 3.5rem; padding-bottom: 1.5rem; background-position: center;} 
     .screenshot { border-radius: 15px;}
     .hide-scrollbar::-webkit-scrollbar { display: none; }
@@ -67,7 +67,7 @@
     .logo { max-width: 100px;}
     .footer-link { color: #04a8e8; }
     .footer-link:hover { text-decoration: underline; }
-    .map-top { background: white; }
+    .map-top { background: #00a3ff; }
   </style>
 
 </head>
@@ -131,11 +131,11 @@
     <!-- World map as background -->
     <div 
       class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-      style="background-image: url('assets/index/background_map.webp');"
+      style="background-image: url('assets/index/map_3.png');"
     ></div>
     
     <!-- Semi-transparent blue layer on top -->
-    <div class="absolute inset-0 map-top opacity-70"></div>
+    <div class="absolute inset-0 map-top opacity-60"></div>
   </div>
 
 
@@ -145,7 +145,7 @@
 
 
   <!--  Top Bar Section -> JS for hamburger  -->
-  <div class="fixed top-0 left-0 right-0 z-50 bg-blue-50 bg-opacity-70 backdrop-blur-lg">
+  <div class="fixed top-0 left-0 right-0 z-50 bg-blue-50 bg-opacity-30 backdrop-blur-lg">
     <div class="container mx-auto px-4 py-3 flex flex-row justify-between items-center text-center sm:text-left text-sm md:text-base">
       
       <!-- Left side -->
@@ -166,14 +166,14 @@
 
         <!-- Text link - HOW IT WORKS – smooth scroll -->
         <a href="#how-it-works" 
-          class="hover:text-green-500 hover:scale-105 hover:font-bold font-semibold px-3 py-2
+          class="text-white hover:text-black hover:font-bold font-semibold px-3 py-2
                 transition-all duration-300 whitespace-nowrap flex items-center gap-4">
           HOW IT WORKS
         </a>
 
         <!-- Text link - REVIEWS – smooth scroll -->
         <a href="#reviews" 
-          class="hover:text-green-500 hover:scale-105 hover:font-bold font-semibold px-6 py-2
+          class="text-white hover:text-black hover:font-bold font-semibold px-6 py-2
                 transition-all duration-300 whitespace-nowrap flex items-center gap-4">
           REVIEWS
         </a>
@@ -199,7 +199,7 @@
       </div>
 
       <!-- Right side MOBILE - Hamburger Menu -->
-      <button id="hamburger" class="z-50 md:hidden text-black text-3xl focus:outline-none">
+      <button id="hamburger" class="z-50 md:hidden text-white text-3xl focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path id="ham-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                 d="M4 6h16M4 12h16M4 18h16"/>
@@ -212,11 +212,11 @@
   </div>
   
   <!-- Mobile menu (hidden by default) -->
-  <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-blue-50 bg-opacity-70 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
+  <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-blue-50 bg-opacity-30 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
     
-    <a href="#how-it-works" class="block text-black hover:text-green-500 hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
+    <a href="#how-it-works" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
-    <a href="#reviews" class="block text-black hover:text-green-500 hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a>
+    <a href="#reviews" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a>
 
     <div class="flex flex-row justify-left items-center gap-4">
 
@@ -244,29 +244,104 @@
   
 
   <!-- Content -->
-  <section class="relative py-10 px-20">
+  <section class="relative pt-20 py-10 px-40">
 
     <!-- Title -->
-    <div class="text-center md:text-center px-30 pt-30 text-white">
-      <h1 class="text-2xl md:text-6xl font-bold mb-3" style="color: #04a8e8">You save the stops</h1>
-      <h1 class="text-2xl md:text-6xl font-bold mb-3" style="color: #04a8e8">We'll handle the rest</h1>
-      <h3 class="text-lg md:text-2xl font-bold" style="color: #04a8e8">Turn saved posts into trip itineraries and live guides</h3>
+    <div class="text-center md:text-center px-30 pt-20 text-white">
+      <h1 class="text-2xl md:text-6xl font-bold mb-3">Scan posts, create trips,</h1>
+      <h1 class="text-2xl md:text-6xl font-bold mb-3">& travel with your guides</h1>
     </div>
 
     <!-- Main image -->
-    <div class="text-center px-60 py-10">
-      <img src="assets/index/main.png" alt="Meily Trips" loading="lazy">
+    <div class="text-center px-40 py-10">
+      <img src="assets/index/main_image.png" alt="Meily Trips" loading="lazy">
     </div>
 
-    <!-- Feature 1 -->
+    <!-- Container Feature 1: Scan posts -->
+    <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20">
+      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
+        
+        <!-- Left: Image -->
+        <div class="flex justify-center">
+          <img 
+            src="assets/index/feature_1_posts.png" 
+            alt="Scan Posts & Create Trips" 
+            class="w-full max-w-lg object-cover"
+            loading="lazy"
+          >
+        </div>
 
-    <!-- Feature 2 -->
+        <!-- Right: Text -->
+        <div class="text-white space-y-4 md:space-y-6">
+          <h3 class="text-3xl md:text-4xl font-bold text-white">
+            Scan Posts & Create Trips
+          </h3>
+          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
+            Import posts from Instagram, TikTok, or YouTube. Meily Trips analyzes the stops from the content and builds the itinerary for you.
+          </p>
+        </div>
 
-    <!-- Feature 3 -->
+      </div>
+    </div>
 
-    <!-- Feature 4 -->
+    <!-- Container Feature 2: Create Trips with AI -->
+     <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20">
+      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
 
-    <!-- Feature 5 -->
+        <!-- Left: Text -->
+        <div class="text-white space-y-4 md:space-y-6">
+          <h3 class="text-3xl md:text-4xl font-bold text-white">
+            Create Trips in One Tap
+          </h3>
+          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
+            Tell Meily Trips where you want to go, how many days you have, and your trip preferences - it will create a full itinerary for you in seconds.
+          </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="flex justify-center">
+          <img 
+            src="assets/index/feature_2_ai.png" 
+            alt="Create Trips with AI" 
+            class="w-full max-w-lg object-cover"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Container Feature 3: Travel with Your Guides -->
+     <div class="px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20">
+      <div class="flex flex-col md:flex-row gap-8 p-8 md:p-12 items-center">
+        
+        <!-- Left: Image -->
+        <div class="flex justify-center">
+          <img 
+            src="assets/index/feature_3_guides.png" 
+            alt="Travel with Your Guides" 
+            class="w-full max-w-lg object-cover"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Right: Text -->
+        <div class="text-white space-y-4 md:space-y-6">
+          <h3 class="text-3xl md:text-4xl font-bold text-white">
+            Explore with Your Guides
+          </h3>
+          <p class="text-lg md:text-xl leading-relaxed opacity-90 text-white">
+            Take pictures, ask questions, and get real-time voice answers from your AI-powered tourist guides. It’s literally like having a local expert for each destination in your pocket.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- All your trips in one place -->
 
   </section>
 
@@ -452,7 +527,7 @@
   <!-- Call To Action (CTA) Section -->
   <section id="download" class="relative py-20 text-white">
     <div class="container mx-auto px-7 text-center">
-      <h3 class="text-4xl md:text-5xl mb-12 font-bold" style="color: #04a8e8">Ready to plan your next trip?</h3>
+      <h3 class="text-4xl md:text-5xl mb-12 font-bold">Ready to plan your next trip?</h3>
 
       <div class="flex flex-col md:flex-row justify-center gap-4 mx-auto">
 
@@ -489,23 +564,23 @@
   </section>
 
   <!-- Footer Section -->
-  <footer class="relative bg-white px-5 md:px-20 py-12 bg-opacity-50">
-    <div class="container mx-auto px-6 max-w-7xl text-l">
+  <footer class="relative bg-white px-5 md:px-20 py-12 bg-opacity-20 rounded-t-3xl backdrop-blur-2xl">
+    <div class="container mx-auto px-6 max-w-7xl text-l text-white">
 
       <!-- 4 Columns Grid (1 column mobile) -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
 
         <!-- Column 1 – Brand -->
         <div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">
+          <h3 class="text-xl font-bold mb-4">
             Meily Trips®<br>Application
           </h3>
         </div>
 
         <!-- Column 2 – Product -->
         <div>
-          <h3 class="text-lg font-bold text-gray-900 mb-4">Product</h3>
-          <ul class="space-y-3 text-gray-600">
+          <h3 class="text-lg font-bold mb-4">Product</h3>
+          <ul class="space-y-3">
             <li><a href="#how-it-works" class="hover:underline transition-all">How It Works?</a></li>
             <li><a href="#reviews" class="hover:underline transition-all">Reviews</a></li>
             <li><a href="#download" class="hover:underline transition-all">Get the App</a></li>
@@ -515,8 +590,8 @@
 
         <!-- Column 3 – Connect -->
         <div>
-          <h3 class="text-lg font-bold text-gray-900 mb-4">Connect</h3>
-          <ul class="space-y-3 text-gray-600">
+          <h3 class="text-lg font-bold mb-4">Connect</h3>
+          <ul class="space-y-3">
             <li><a href="privacy-policy.html" class="hover:underline transition-all">Contact Us</a></li>
             <li><a href="privacy-policy.html" class="hover:underline transition-all">Privacy Policy</a></li>
             <li><a href="terms-of-use.html" class="hover:underline transition-all">Terms of Use</a></li>
@@ -525,7 +600,7 @@
 
         <!-- Column 4 – Social Media -->
         <div>
-          <ul class="space-y-3 text-gray-900">
+          <ul class="space-y-3">
             <li>
               <!-- https://www.tiktok.com/@touristguideai -->
               <a href="TIKTOK-LINK"
@@ -569,10 +644,10 @@
       </div>
 
       <!-- Horizontal Line -->
-      <hr class="my-10 border-gray-300">
+      <hr class="my-10 border-white">
 
       <!-- Copyright -->
-      <div class="text-left text-gray-600 text-sm">
+      <div class="text-left text-white text-sm">
         © 2025 Meily Trips. All Rights Reserved
       </div>
 
