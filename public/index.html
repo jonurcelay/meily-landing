@@ -139,7 +139,6 @@
   </div>
 
 
-
   <!-- ----------------------------------------------------------------- -->
 
 
@@ -179,7 +178,8 @@
         </a>
 
         <!-- CTA button - Android -->
-        <a href="https://play.google.com/store/apps/details?id=com.meily.app"
+        <!-- GOOGLE-PLAY-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE"
           target="_blank" 
           rel="noopener"
           onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
@@ -188,7 +188,8 @@
         </a>
 
         <!-- CTA button - iOS -->
-        <a href="https://apps.apple.com/us/app/meily-trips/id6758970869"
+        <!-- APP-STORE-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE"
           target="_blank" 
           rel="noopener"
           onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
@@ -220,13 +221,15 @@
 
     <div class="flex flex-row justify-left items-center gap-4">
 
-        <a href="https://play.google.com/store/apps/details?id=com.meily.app" target="_blank" rel="noopener"
+        <!-- GOOGLE-PLAY-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE" target="_blank" rel="noopener"
           onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
           class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
           <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
         </a>
 
-        <a href="https://apps.apple.com/us/app/meily-trips/id6758970869" target="_blank" rel="noopener"
+        <!-- APP-STORE-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE" target="_blank" rel="noopener"
           onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
           class="cta-button text-black px-7 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
           <img src="assets/apple_logo_black.webp" alt="iOS" class="w-5 h-5"> iOS
@@ -241,7 +244,6 @@
 
   <!-- ----------------------------------------------------------------- -->
 
-  
 
   <!-- Content -->
   <section class="relative pt-20 px-10 md:px-40">
@@ -250,6 +252,73 @@
     <div class="text-center md:text-center md:px-30 pt-10 md:pt-20 text-white">
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Scan posts, create trips,</h1>
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">& travel with your guides</h1>
+    </div>
+
+    <!-- Launching Soon Banner -->
+    <div class="text-center pt-6">
+      <div class="inline-block w-full max-w-2xl px-4 py-6 md:px-12 md:py-6 rounded-3xl backdrop-blur-xl bg-white bg-opacity-20 border border-white/20">
+        
+        <!-- Countdown Timer -->
+        <div class="mb-6">
+          <!-- Main headline -->
+          <p class="mb-4 text-2xl md:text-6xl font-bold text-white tracking-wide">
+            Time for launch:
+          </p>
+
+          <div id="countdown" class="flex justify-center gap-4 md:gap-6 text-white font-bold">
+            
+            <div class="text-center">
+              <span id="days" class="block text-4xl md:text-6xl">00</span>
+              <span class="text-sm md:text-base opacity-80">Days</span>
+            </div>
+
+            <div class="text-center">
+              <span id="hours" class="block text-4xl md:text-6xl">00</span>
+              <span class="text-sm md:text-base opacity-80">Hours</span>
+            </div>
+
+            <div class="text-center">
+              <span id="minutes" class="block text-4xl md:text-6xl">00</span>
+              <span class="text-sm md:text-base opacity-80">Min</span>
+            </div>
+
+            <div class="text-center">
+              <span id="seconds" class="block text-4xl md:text-6xl">00</span>
+              <span class="text-sm md:text-base opacity-80">Sec</span>
+            </div>
+
+          </div>
+        </div>
+        
+
+        <!-- Email Notification Signup -->
+        <form action="https://formspree.io/f/xaqdzenk" 
+              method="POST" 
+              class="flex flex-col sm:flex-row justify-center gap-4 max-w-xl mx-auto">
+          
+          <!-- Email input -->
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required 
+            class="flex-1 px-6 py-4 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-black placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#04a8e8] focus:border-transparent text-lg"
+          >
+          
+          <!-- Submit button -->
+          <button 
+            type="submit" 
+            class="cta-button px-8 py-4 rounded-full text-black font-semibold text-lg hover:scale-105 transition-transform whitespace-nowrap"
+          >
+            Notify Me
+          </button>
+        </form>
+        
+        <!-- Optional success message (shown via JS below) -->
+        <p id="success-msg" class="mt-4 text-white hidden">Thanks! We'll let you know when we launch 🎉</p>
+
+      </div>
+
     </div>
 
     <!-- Main image -->
@@ -343,11 +412,12 @@
 
   </section>
 
-  <!-- Reviews Section -->
+  <!-- Reviews Section (hidden for now) -->
+   <!--
   <section id="reviews" class="relative scroll-mt-24 px-5 md:px-10 pt-20">
     <div class="container mx-auto px-6 max-w-7xl text-white">
 
-      <!-- Title & Subtitle -->
+      <!- Title & Subtitle ->
       <div class="text-center mb-10">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">
           Our Users Love Meily Trips
@@ -357,10 +427,10 @@
         </p>
       </div>
 
-      <!-- 4 Review Cards – responsive grid for laptop -->
+      <!- 4 Review Cards – responsive grid for laptop ->
       <div class="hidden md:flex grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
 
-        <!-- Review 1 -->
+        <!- Review 1 ->
         <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
           <h3 class="text-xl font-semibold mb-3">Saved me $300 in Hanoi!</h3>
           <p class="leading-relaxed">
@@ -375,7 +445,7 @@
           </div>
         </div>
 
-        <!-- Review 2 -->
+        <!- Review 2 ->
         <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
           <h3 class="text-xl font-semibold mb-3">Better than a human guide!</h3>
           <p class="leading-relaxed">
@@ -390,7 +460,7 @@
           </div>
         </div>
 
-        <!-- Review 3 -->
+        <!- Review 3 ->
         <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
           <h3 class="text-xl font-semibold mb-3">My travel best friend</h3>
           <p class="leading-relaxed">
@@ -405,7 +475,7 @@
           </div>
         </div>
 
-        <!-- Review 4 -->
+        <!- Review 4 ->
         <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow">
           <h3 class="text-xl font-semibold mb-3">Best $9.99 I ever spent</h3>
           <p class="leading-relaxed">
@@ -422,11 +492,11 @@
 
       </div>
 
-      <!-- 4 Review Card - Swipeable Carousel for mobile -->
+      <!- 4 Review Card - Swipeable Carousel for mobile ->
       <div class="md:hidden -mx-10">
         <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
 
-          <!-- Same 4 cards, but now inside carousel -->
+          <!- Same 4 cards, but now inside carousel ->
           <div class="w-full flex-shrink-0 snap-center">
             <div class="bg-white bg-opacity-20 rounded-2xl shadow-lg p-8 h-full">
               <h3 class="text-xl font-semibold mb-3">Saved me $300 in Hanoi!</h3>
@@ -468,6 +538,7 @@
 
     </div>
   </section>
+  -->
 
 
 
@@ -480,7 +551,11 @@
 
       <div class="flex flex-col md:flex-row justify-center gap-4 mx-auto">
 
-        <a href="https://play.google.com/store/apps/details?id=com.meily.app"
+        
+        <!-- https://www.youtube.com/watch?v=BPptLjLZvUE -->
+        <!-- https://play.google.com/store/apps/details?id=com.meily.app -->
+        <!-- GOOGLE-PLAY-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE"
           target="_blank" 
           rel="noopener"
           class="cta-button inline-flex items-center text-black px-8 py-5 md:py-3 rounded-full hover:scale-105 transition-transform"
@@ -493,8 +568,9 @@
           <span class="text-left text-lg font-semibold">Get Android App</span>
         </a>
 
-        <!-- https://apps.apple.com/us/app/tourist-guide-ai/id6751420818 -->
-        <a href=""
+        <!-- https://apps.apple.com/us/app/meily-trips/id6758970869 -->
+        <!-- APP-STORE-LINK -->
+        <a href="https://www.youtube.com/watch?v=BPptLjLZvUE"
           target="_blank" 
           rel="noopener"
           class="cta-button inline-flex items-center text-black px-8 py-5 md:py-3 rounded-full hover:scale-105 transition-transform"
@@ -597,6 +673,63 @@
 
     </div>
   </footer>
+
+
+
+
+
+  <!-- Script for adding email to waitlist -->
+  <script>
+    document.querySelector('form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          document.getElementById('success-msg').classList.remove('hidden');
+          form.reset();
+        } else {
+          alert('Something went wrong – try again!');
+        }
+      } catch (error) {
+        alert('Network error – please check your connection.');
+      }
+    });
+  </script>
+
+  <!-- Script for countdown timer -->
+   <script>
+    // Set your launch date here (YYYY, MM-1, DD, HH, MM, SS)
+    const launchDate = new Date(2026, 2, 6, 10, 0, 0).getTime(); // Example: March 6, 2026, 10:00 AM
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "<span class='text-3xl md:text-5xl'>We're Live! 🎉</span>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days.toString().padStart(2, '0');
+      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+    }
+
+    // Update every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+  </script>
 
 </body>
 
