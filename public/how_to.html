@@ -243,151 +243,140 @@
 
 
 
-    <!-- Content -->
-    <section class="content-bg py-10 pt-28 px-7 md:px-32">
-        <div class="container mx-auto mb-6">
-            
-            
-
-            
-
-        </div>
-    </section>
-
     <!-- Content Section with Sidebar Layout -->
-    <section class="content-bg min-h-screen pt-28">
-    <div class="container mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-6 md:px-16 lg:px-32">
+    <section class="content-bg min-h-screen pt-28 pb-10">
+        <div class="container mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-10">
 
-        <!-- LEFT SIDEBAR – Fixed on md+ -->
-        <aside class="md:w-72 lg:w-80 flex-shrink-0">
-        <div class="md:sticky md:top-28 md:max-h-[calc(100vh-7rem)] overflow-y-auto pb-8">
-            <nav class="sidebar bg-white/80 backdrop-blur-md rounded-xl border border-white/30 shadow-lg p-6">
-            <h3 class="text-xl font-bold mb-6" style="color: #04a8e8">How to Use Meily Trips</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li><a href="#trip-itineraries" class="block py-2 px-4 rounded-lg transition">1. Trip Itineraries</a></li>
-                <ul class="ml-6 space-y-1 text-sm">
-                <li><a href="#create-itineraries" class="block py-1.5 px-3 rounded transition">1.1 How to create trip itineraries</a></li>
-                <li><a href="#ai-itinerary" class="block py-1 px-4 rounded transition">1.1.1 With AI</a></li>
-                <li><a href="#from-posts" class="block py-1 px-4 rounded transition">1.1.2 From Posts</a></li>
-                <li><a href="#manual" class="block py-1 px-4 rounded transition">1.1.3 Manually</a></li>
-                <li><a href="#after-create" class="block py-1.5 px-3 rounded transition">1.2 Once you create a trip itinerary</a></li>
-                </ul>
+            <!-- LEFT SIDEBAR – Fixed on md+ -->
+            <aside class="md:w-72 lg:w-80 flex-shrink-0">
+                <div class="md:sticky md:top-28 md:max-h-[calc(100vh-7rem)] overflow-y-auto pb-8">
+                    <nav class="sidebar bg-white/80 backdrop-blur-md rounded-xl shadow-lg p-6">
+                        <h3 class="text-xl font-bold mb-6" style="color: #04a8e8">How to Use Meily Trips</h3>
+                        <ul class="space-y-2 text-gray-700">
+                            <li><a href="#trip-itineraries" class="block py-2 px-4 rounded-lg transition">1. Trip Itineraries</a></li>
+                            <ul class="ml-6 space-y-1 text-sm">
+                            <li><a href="#create-itineraries" class="block py-1.5 px-3 rounded transition">1.1 How to create trip itineraries</a></li>
+                            <li><a href="#ai-itinerary" class="block py-1 px-4 rounded transition">1.1.1 With AI</a></li>
+                            <li><a href="#from-posts" class="block py-1 px-4 rounded transition">1.1.2 From Posts</a></li>
+                            <li><a href="#manual" class="block py-1 px-4 rounded transition">1.1.3 Manually</a></li>
+                            <li><a href="#after-create" class="block py-1.5 px-3 rounded transition">1.2 Once you create a trip itinerary</a></li>
+                            </ul>
 
-                <li><a href="#posts" class="block py-2 px-4 rounded-lg transition">2. Posts</a></li>
-                <ul class="ml-6 space-y-1 text-sm">
-                <li><a href="#scan-posts" class="block py-1.5 px-3 rounded transition">2.1 How to scan posts</a></li>
-                <li><a href="#share-app" class="block py-1 px-4 rounded transition">2.1.1 By sharing with Meily Trips app</a></li>
-                <li><a href="#paste-link" class="block py-1 px-4 rounded transition">2.1.2 By pasting link</a></li>
-                <li><a href="#create-from-posts" class="block py-1.5 px-3 rounded transition">2.2 How to create trips from scanned posts</a></li>
-                </ul>
+                            <li><a href="#posts" class="block py-2 px-4 rounded-lg transition">2. Posts</a></li>
+                            <ul class="ml-6 space-y-1 text-sm">
+                            <li><a href="#scan-posts" class="block py-1.5 px-3 rounded transition">2.1 How to scan posts</a></li>
+                            <li><a href="#share-app" class="block py-1 px-4 rounded transition">2.1.1 By sharing with Meily Trips app</a></li>
+                            <li><a href="#paste-link" class="block py-1 px-4 rounded transition">2.1.2 By pasting link</a></li>
+                            <li><a href="#create-from-posts" class="block py-1.5 px-3 rounded transition">2.2 How to create trips from scanned posts</a></li>
+                            </ul>
 
-                <li><a href="#guides" class="block py-2 px-4 rounded-lg transition">3. Guides</a></li>
-                <ul class="ml-6 space-y-1 text-sm">
-                <li><a href="#create-guide" class="block py-1.5 px-3 rounded transition">3.1 How to create a guide</a></li>
-                <li><a href="#from-itinerary" class="block py-1 px-4 rounded transition">3.1.1 From an existing itinerary</a></li>
-                <li><a href="#from-scratch" class="block py-1 px-4 rounded transition">3.1.2 From scratch</a></li>
-                <li><a href="#use-guide" class="block py-1.5 px-3 rounded transition">3.2 How to use a guide</a></li>
-                </ul>
-            </ul>
-            </nav>
+                            <li><a href="#guides" class="block py-2 px-4 rounded-lg transition">3. Guides</a></li>
+                            <ul class="ml-6 space-y-1 text-sm">
+                            <li><a href="#create-guide" class="block py-1.5 px-3 rounded transition">3.1 How to create a guide</a></li>
+                            <li><a href="#from-itinerary" class="block py-1 px-4 rounded transition">3.1.1 From an existing itinerary</a></li>
+                            <li><a href="#from-scratch" class="block py-1 px-4 rounded transition">3.1.2 From scratch</a></li>
+                            <li><a href="#use-guide" class="block py-1.5 px-3 rounded transition">3.2 How to use a guide</a></li>
+                            </ul>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT – Scrollable sections -->
+            <main class="flex-1 prose prose-lg max-w-none text-gray-800">
+
+                <!-- 1. Trip Itineraries  -->
+                <div id="trip-itineraries" class="scroll-mt-28">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">1. Trip Itineraries</h1>
+                    
+                    <!-- 1.1. How to create trip itineraries  -->
+                    <h2 id="create-itineraries" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.1 How to create trip itineraries</h2>
+                    <p>Content about how to create a trip...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 1.1.1. With AI -->
+                    <h3 id="ai-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.1 With AI</h3>
+                    <p>Content about AI itinerary creation...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 1.1.2. From Posts -->
+                    <h3 id="post-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.2 From Posts</h3>
+                    <p>Content about itinerary creation from posts...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 1.1.3. Manually -->
+                    <h3 id="manual-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.3 Manually</h3>
+                    <p>Content about manual trip creation...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 1.2. Once you create a trip itinerary  -->
+                    <h2 id="once-itinerary-creates" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.2 Once you create a trip itinerary</h2>
+                    <p>Content about once itinerary created...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                </div>
+
+                <!-- 2. Posts  -->
+                <div id="posts" class="scroll-mt-28 mt-16">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">2. Posts</h1>
+                    <p>Content about scanning posts...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 2.1. How to scan posts  -->
+                    <h2 id="scan-posts" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">2.1 How to scan posts</h2>
+                    <p>Content about how to scan posts...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 2.1.1. By sharing with Meily Trips app  -->
+                    <h3 id="scan-posts-sharing" class="text-2xl font-bold mt-8 mb-3">2.1.1 Sharing Post</h3>
+                    <p>Content about how to share post with app...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 2.1.2. By pasting link  -->
+                    <h3 id="scan-posts-paste" class="text-2xl font-bold mt-8 mb-3">2.1.2 Copy-Paste Link from Post</h3>
+                    <p>Content about how to copy post link and paste in the app...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 2.2. How to create trips from scanned posts  -->
+                    <h2 id="trips-from-posts" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">2.2 How to create trips from scanned posts</h2>
+                    <p>Content about how to create trips from scanned posts...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                </div>
+
+                <!-- 3. Guides  -->
+                <div id="guides" class="scroll-mt-28 mt-16">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">3. Guides</h1>
+
+                    <!-- 3.1. How to create a guide  -->
+                    <h2 id="create-guide" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">3.1 How to create a guide</h2>
+                    <p>Content about how to create a guide...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 3.1.1. From an existing itinerary  -->
+                    <h3 id="create-guide-itinerary" class="text-2xl font-bold mt-8 mb-3">3.1.1. From an existing itinerary</h3>
+                    <p>Content about how to create a guide from an existing itinerary...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 3.1.2. From scratch  -->
+                    <h3 id="create-guide-itinerary" class="text-2xl font-bold mt-8 mb-3">3.1.2. From scratch</h3>
+                    <p>Content about how to create a guide from scratch...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 3.2. How to use a guide  -->
+                    <h2 id="use-guide" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">3.1 How to use a guide</h2>
+                    <p>Content about how to use a guide...</p>
+                    <!-- Add screenshots, steps, etc. -->
+                </div>
+
+
+                <!-- *. Ideas  -->
+                <!-- *. How to create account  -->
+                <!-- *. How to upgrade account  -->
+                <!-- *. How to delete account  -->
+
+            </main>
         </div>
-        </aside>
-
-        <!-- MAIN CONTENT – Scrollable sections -->
-        <main class="flex-1 prose prose-lg max-w-none text-gray-800">
-
-            <!-- 1. Trip Itineraries  -->
-            <div id="trip-itineraries" class="scroll-mt-28">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">1. Trip Itineraries</h1>
-                
-                <!-- 1.1. How to create trip itineraries  -->
-                <h2 id="create-itineraries" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.1 How to create trip itineraries</h2>
-                <p>Content about how to create a trip...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 1.1.1. With AI -->
-                <h3 id="ai-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.1 With AI</h3>
-                <p>Content about AI itinerary creation...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 1.1.2. From Posts -->
-                <h3 id="post-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.2 From Posts</h3>
-                <p>Content about itinerary creation from posts...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 1.1.3. Manually -->
-                <h3 id="manual-itinerary" class="text-2xl font-bold mt-8 mb-3">1.1.3 Manually</h3>
-                <p>Content about manual trip creation...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 1.2. Once you create a trip itinerary  -->
-                <h2 id="once-itinerary-creates" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.2 Once you create a trip itinerary</h2>
-                <p>Content about once itinerary created...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-            </div>
-
-            <!-- 2. Posts  -->
-            <div id="posts" class="scroll-mt-28 mt-16">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">2. Posts</h1>
-                <p>Content about scanning posts...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 2.1. How to scan posts  -->
-                <h2 id="scan-posts" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">2.1 How to scan posts</h2>
-                <p>Content about how to scan posts...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 2.1.1. By sharing with Meily Trips app  -->
-                <h3 id="scan-posts-sharing" class="text-2xl font-bold mt-8 mb-3">2.1.1 Sharing Post</h3>
-                <p>Content about how to share post with app...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 2.1.2. By pasting link  -->
-                <h3 id="scan-posts-paste" class="text-2xl font-bold mt-8 mb-3">2.1.2 Copy-Paste Link from Post</h3>
-                <p>Content about how to copy post link and paste in the app...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 2.2. How to create trips from scanned posts  -->
-                <h2 id="trips-from-posts" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">2.2 How to create trips from scanned posts</h2>
-                <p>Content about how to create trips from scanned posts...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-            </div>
-
-            <!-- 3. Guides  -->
-            <div id="guides" class="scroll-mt-28 mt-16">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">3. Guides</h1>
-
-                <!-- 3.1. How to create a guide  -->
-                <h2 id="create-guide" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">3.1 How to create a guide</h2>
-                <p>Content about how to create a guide...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 3.1.1. From an existing itinerary  -->
-                <h3 id="create-guide-itinerary" class="text-2xl font-bold mt-8 mb-3">3.1.1. From an existing itinerary</h3>
-                <p>Content about how to create a guide from an existing itinerary...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 3.1.2. From scratch  -->
-                <h3 id="create-guide-itinerary" class="text-2xl font-bold mt-8 mb-3">3.1.2. From scratch</h3>
-                <p>Content about how to create a guide from scratch...</p>
-                <!-- Add screenshots, steps, etc. -->
-
-                <!-- 3.2. How to use a guide  -->
-                <h2 id="use-guide" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">3.1 How to use a guide</h2>
-                <p>Content about how to use a guide...</p>
-                <!-- Add screenshots, steps, etc. -->
-            </div>
-
-
-            <!-- *. Ideas  -->
-            <!-- *. How to create account  -->
-            <!-- *. How to upgrade account  -->
-            <!-- *. How to delete account  -->
-
-        </main>
-    </div>
     </section>
 
 
