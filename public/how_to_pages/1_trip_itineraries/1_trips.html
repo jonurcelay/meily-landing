@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Meily Trips",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "Travel",
+    "description": "Meily Trips: Create full travel itineraries, or scan videos from social media to create a trip.",
+    "url": "https://meily.app",
+    "image": "https://meily.app/assets/meily-logo-square.webp"
+  }
+  </script>
+  
+  <meta name="description" content="How to create full travel itineraries, scan videos from social media to create a trip, and create your custome tourist guides.">
+  <meta name="keywords" content="how to create travel itineraries, how to organize trip, tips to plan trip, how to create trip with AI, creating a trip itinerary">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Meily Trips">
+  <meta property="og:title" content="How to Create Your Trips">
+  <meta property="og:description" content="How to create full travel itineraries, scan videos from social media to create a trip, and create your custome tourist guides.">
+  <meta property="og:image" content="https://www.meily.app/assets/meily-preview.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://meily.app/how_to.html">
+  <meta property="og:type" content="website">
+
+  <title>How to Create Your Trips</title>
+  <link rel="icon" type="image/webp" href="../../assets/meily-logo-square.webp">
+  <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    html {
+      scroll-behavior: smooth !important;
+    }
+    .hero-bg { background: #d0f2ff}
+    .logo-text { color:#04a8e8; }
+    .content-bg { background: #eafaff} 
+    .cta-button { background-color: #d0f2ff; transition: transform 0.3s ease; }
+    .cta-button:hover { transform: scale(1.05); }
+    .cta-button-down { background-color: white; transition: transform 0.3s ease; }
+    .cta-button-down:hover { transform: scale(1.05); }
+    .logo { max-width: 40px;}
+    .footer-link { color: #04a8e8; }
+    .footer-link:hover { text-decoration: underline; }
+    .post-card { background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); overflow: hidden; }
+    .post-img { width: 100%; height: 200px; object-fit: cover; }
+    .post-content { padding: 1.5rem; }
+    .sidebar a.active {
+        color: #04a8e8;
+        font-weight: 700;
+        background: #d0f2ff;
+    }
+    .sidebar a:hover {
+        color: #04a8e8;
+    }
+    .sidebar .nested {
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+    .sidebar .nested[style*="display: block"] {
+        max-height: 500px; /* large enough for your content */
+        opacity: 1;
+    }
+  </style>
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4ZPF7PL0Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M4ZPF7PL0Q');
+</script>
+
+<!-- JS for hamburger -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamIcon = document.getElementById('ham-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    // Toggle menu open/close
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevent triggering document click
+      mobileMenu.classList.toggle('hidden');
+      hamIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking any link (so it actually navigates!)
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // Close when clicking outside the menu
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+        hamIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    // Prevent menu from closing when clicking inside it
+    mobileMenu.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+
+  });
+</script>
+
+<!-- JS for active link highlighting -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('main > div[id]');
+    const navLinks = document.querySelectorAll('.sidebar a[href^="#"]');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          const activeLink = document.querySelector(`.sidebar a[href="#${entry.target.id}"]`);
+          if (activeLink) activeLink.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3, rootMargin: '-100px 0px -50%' });
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
+<!-- JS for loading sidebar from external file -->
+<script>
+  fetch('../how_to_sidebar.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Sidebar not found');
+      return response.text();
+    })
+    .then(html => {
+      // Insert sidebar
+      document.querySelector('.sidebar-container').innerHTML = html;
+
+      const currentPath = window.location.pathname
+        .replace(/\.html$/, '')           // remove .html
+        .replace(/\/$/, '');              // remove trailing slash
+
+      const sidebarLinks = document.querySelectorAll('.sidebar a');
+
+      let bestMatch = null;
+      let bestScore = 0;
+
+      // Find the most specific matching link
+      sidebarLinks.forEach(link => {
+        let href = link.getAttribute('href');
+        if (!href) return;
+
+        // Normalize href (remove domain if absolute, remove .html for comparison)
+        href = href
+          .replace(/^https?:\/\/[^/]+/, '')   // remove domain if present
+          .replace(/\.html$/, '')
+          .replace(/\/$/, '');
+
+        // Score: higher = better match
+        let score = 0;
+        if (currentPath === href) score = 100;                    // exact match
+        else if (currentPath.startsWith(href + '/')) score = 80;  // folder match
+        else if (currentPath.includes(href)) score = 60;          // partial match
+
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = link;
+        }
+
+      });
+
+      // === Highlight + expand logic ===
+      if (bestMatch) {
+        bestMatch.classList.add('active');
+
+        // Walk up and open ALL parent nested <ul> lists
+        let currentElement = bestMatch.parentElement;   // start from <li>
+
+        while (currentElement) {
+          const nestedUl = currentElement.querySelector('ul.nested, ul[data-parent]');
+          if (nestedUl) {
+            nestedUl.style.display = 'block';
+          }
+          // Move up to parent <li>
+          currentElement = currentElement.parentElement?.closest('li');
+        }
+      }
+    })
+    .catch(err => {
+      console.error('Sidebar load failed:', err);
+      document.querySelector('.sidebar-container').innerHTML = 
+        '<p class="text-red-500 p-4">Failed to load sidebar. Refresh page.</p>';
+    });
+</script>
+
+<body class="bg-white">
+
+    <!-- --------- Top Bar Section -> JS for hamburger ------------------- -->
+    <div class="fixed top-0 left-0 right-0 z-50 bg-white ">
+        <div class="container mx-auto px-4 py-3 flex flex-row justify-between items-center text-center sm:text-left text-sm md:text-base">
+        
+        <!-- Left side -->
+        <div class="flex gap-3">
+
+            <a href="../../index.html" class="hover:scale-105 flex items-center text-xl md:text-xl font-bold transition-all gap-4 logo-text">
+            <img 
+                src="../../assets/meily-logo-square.webp" 
+                alt="Meily Trips Logo" 
+                class="w-8 h-8 md:w-10 md:h-10 object-contain"
+            > Meily Trips
+            </a>
+
+        </div>
+
+        <!-- Right side LAPTOP – CTA buttons -->
+        <div class="hidden md:flex gap-3">
+
+            <!-- Text link - HOW IT WORKS – smooth scroll -->
+            <a href="../../index.html" 
+            class="hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold px-3 py-2
+                    transition-all duration-300 whitespace-nowrap flex items-center gap-4">
+            HOW IT WORKS
+            </a>
+
+            <!-- Text link - REVIEWS – smooth scroll -->
+            <a href="../../index.html" 
+            class="hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold px-6 py-2
+                    transition-all duration-300 whitespace-nowrap flex items-center gap-4">
+            REVIEWS
+            </a>
+
+            <!-- CTA button - Android -->
+            <!-- GOOGLE-PLAY-LINK -->
+        <a href="https://play.google.com/store/apps/details?id=com.meily.app"
+            target="_blank" 
+            rel="noopener"
+            onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
+            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
+            <img src="../../assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
+            </a>
+
+            <!-- CTA button - iOS -->
+            <!-- APP-STORE-LINK -->
+        <a href="https://apps.apple.com/us/app/meily-trips/id6758970869"
+            target="_blank" 
+            rel="noopener"
+            onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
+            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
+            <img src="../../assets/apple_logo_black.webp" alt="iOS" class="w-6 h-6 mb-1"> iOS
+            </a>
+
+        </div>
+
+        <!-- Right side MOBILE - Hamburger Menu -->
+        <button id="hamburger" class="z-50 md:hidden text-black text-3xl focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="ham-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 6h16M4 12h16M4 18h16"/>
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        </div>
+    </div>
+    
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-white hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
+        
+        <a href="../../index.html" class="block text-black hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
+
+        <a href="../../index.html" class="block text-black hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a>
+
+        <div class="flex flex-row justify-left items-center gap-4">
+
+            <!-- GOOGLE-PLAY-LINK -->
+        <a href="https://play.google.com/store/apps/details?id=com.meily.app" target="_blank" rel="noopener"
+            onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
+            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
+            <img src="../../assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
+            </a>
+
+            <!-- APP-STORE-LINK -->
+        <a href="https://apps.apple.com/us/app/meily-trips/id6758970869" target="_blank" rel="noopener"
+            onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
+            class="cta-button text-black px-7 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
+            <img src="../../assets/apple_logo_black.webp" alt="iOS" class="w-5 h-5"> iOS
+            </a>
+
+        </div>
+        
+        
+
+    </div>
+    <!-- ----------------------------------------------------------------- -->
+
+
+
+
+
+
+    <!-- Content Section with Sidebar Layout -->
+    <section class="content-bg min-h-screen pt-28 pb-10">
+        <div class="container mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-10">
+
+            <!-- LEFT SIDEBAR – dynamically loaded -->
+            <div class="sidebar-container md:w-72 lg:w-80 flex-shrink-0"></div>
+
+            <!-- MAIN CONTENT -->
+            <main class="flex-1 prose prose-lg max-w-none text-gray-800">
+
+                <!-- 1. Trip Itineraries  -->
+                <div id="trip-itineraries" class="scroll-mt-28">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6" style="color: #04a8e8">1. Trip Itineraries</h1>
+                    <p>Content about itineraries...</p>
+                    <!-- Add screenshots, steps, etc. -->
+
+                    <!-- 1.1. How to create trip itineraries  -->
+                    <h2 id="create-itineraries" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.1 How to create trip itineraries</h2>
+                    
+                    <!-- 1.2. Once you create a trip itinerary  -->
+                    <h2 id="once-itinerary-creates" class="text-3xl font-bold mt-12 mb-4" style="color: #04a8e8">1.2 Once you create a trip itinerary</h2>
+
+                </div>
+
+            </main>
+            
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- ----------------------------------------------------- -->
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-50 px-5 md:px-20 py-12">
+        <div class="container mx-auto px-6 max-w-7xl text-l">
+
+        <!-- 4 Columns Grid (1 column mobile) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+            <!-- Column 1 – Brand -->
+            <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Meily Trips®<br>Application
+            </h3>
+            </div>
+
+            <!-- Column 2 – Product -->
+            <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Product</h3>
+            <ul class="space-y-3 text-gray-600">
+                <li><a href="../../index.html" class="hover:underline transition-all">How It Works?</a></li>
+                <li><a href="../../index.html" class="hover:underline transition-all">Reviews</a></li>
+                <li><a href="#download" class="hover:underline transition-all">Get the App</a></li>
+                <li><a href="../../faq.html" class="hover:underline transition-all">FAQ's</a></li>
+            </ul>
+            </div>
+
+            <!-- Column 3 – Connect -->
+            <div>
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Connect</h3>
+            <ul class="space-y-3 text-gray-600">
+                <li><a href="../../privacy-policy.html" class="hover:underline transition-all">Contact Us</a></li>
+                <li><a href="../../privacy-policy.html" class="hover:underline transition-all">Privacy Policy</a></li>
+                <li><a href="../../terms-of-use.html" class="hover:underline transition-all">Terms of Use</a></li>
+            </ul>
+            </div>
+
+            <!-- Column 4 – Social Media -->
+            <div>
+            <ul class="space-y-3 text-gray-900">
+                <li>
+                <a href="https://www.tiktok.com/@meily.app"
+                    target="_blank"
+                    class="text-lg font-bold underline hover:scale-105 transition-all">
+                    TikTok
+                </a>
+                </li>
+
+                <li>
+                <a href="https://www.instagram.com/meily.app/"
+                    target="_blank"
+                    class="text-lg font-bold underline hover:scale-105 transition-all">
+                    Instagram
+                </a>
+                </li>
+
+                <li>
+                <a href="https://www.youtube.com/@MeilyTrips" 
+                    target="_blank" 
+                    class="text-lg font-bold underline hover:scale-105 transition-all">
+                    YouTube
+                </a>
+                </li>
+
+                <li>
+                <a href="https://www.facebook.com/groups/848215294497637" 
+                    target="_blank" 
+                    class="text-lg font-bold underline hover:scale-105 transition-all">
+                    Facebook
+                </a>
+                </li>
+
+            </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Horizontal Line -->
+        <hr class="my-10 border-gray-300">
+
+        <!-- Copyright -->
+        <div class="text-left text-gray-600 text-sm">
+            © 2026 Meily Trips. All Rights Reserved
+        </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

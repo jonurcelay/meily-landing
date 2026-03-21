@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo-text {
+    color: white; /* green: #6fc573 / blue: #04a8e8 */
+} 
+
+.hero-bg {
+    background: #d0f2ff;
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+    background-position:
+    center;
+} 
+
+.screenshot {
+    border-radius: 15px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/*.cta-button { background-color: #6fc573; transition: transform 0.3s ease; } */
+
+.cta-button {
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.footer-link {
+    color: #04a8e8;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.map-top {
+    background: #00a3ff;
+}
