@@ -1,15 +1,54 @@
-html {
-    scroll-behavior: smooth !important;
-}
+
 
 body {
     font-family: 'Poppins', sans-serif;
 }
 
-.logo-text {
-    color: white; /* green: #6fc573 / blue: #04a8e8 */
+html {
+    scroll-behavior: smooth !important;
+}
+
+
+.cta-button-green {
+    background-color: #6fc573;
+    transition: transform 0.3s ease;
+}
+
+.cta-button-green:hover {
+    transform: scale(1.05);
+}
+
+.cta-button-white {
+    background-color: white;
+    transition: transform 0.3s ease;
+}
+
+.cta-button-white:hover {
+    transform: scale(1.05);
+}
+
+.cta-button-blue {
+    background-color: #d0f2ff;
+    transition: transform 0.3s ease;
+}
+
+.cta-button-blue:hover {
+    transform: scale(1.05);
+}
+
+.content-bg {
+    background: #eafaff
 } 
 
+.footer-link {
+    color: #04a8e8;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/*
 .hero-bg {
     background: #d0f2ff;
     padding-top: 3.5rem;
@@ -17,10 +56,7 @@ body {
     background-position:
     center;
 } 
-
-.screenshot {
-    border-radius: 15px;
-}
+*/
 
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
@@ -31,29 +67,67 @@ body {
     scrollbar-width: none;
 }
 
-/*.cta-button { background-color: #6fc573; transition: transform 0.3s ease; } */
+.logo-text-white {
+    color: white; /* green: #6fc573 / blue: #04a8e8 */
+} 
 
-.cta-button {
-    background-color: white;
-    transition: transform 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: scale(1.05);
-}
-
-.logo {
-    max-width: 100px;
-}
-
-.footer-link {
-    color: #04a8e8;
-}
-
-.footer-link:hover {
-    text-decoration: underline;
+.logo-text-blue {
+    color:#04a8e8;
 }
 
 .map-top {
     background: #00a3ff;
 }
+
+.post-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post-card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+    display: block;
+}
+
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.screenshot {
+    border-radius: 15px;
+}
+
+.sidebar a.active {
+    color: #04a8e8;
+    font-weight: 700;
+    background: #d0f2ff;
+}
+
+.sidebar a:hover {
+    color: #04a8e8;
+}
+
+.sidebar .nested {
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.sidebar .nested[style*="display: block"] {
+    max-height: 500px;
+    opacity: 1;
+}
+

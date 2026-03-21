@@ -35,19 +35,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    html {
-      scroll-behavior: smooth !important;
-    }
-    body { font-family: 'Poppins', sans-serif; }
-    .logo-text { color:#04a8e8; }
-    .hero-bg { background: #d0f2ff; padding-top: 2.5rem; padding-bottom: 1.5rem;}
-    .logo { max-width: 100px;}
-    .cta-button { background-color: #d0f2ff; transition: transform 0.3s ease; }
-    .cta-button-down { background-color: white; transition: transform 0.3s ease; }
-    .footer-link { color: #04a8e8; }
-    .footer-link:hover { text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="/styles.css">
+  
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -111,7 +100,7 @@
         <!-- Left side -->
         <div class="flex gap-3">
 
-            <a href="index.html" class="hover:scale-105 flex items-center text-xl md:text-xl font-bold transition-all gap-4 logo-text">
+            <a href="index.html" class="hover:scale-105 flex items-center text-xl md:text-xl font-bold transition-all gap-4 logo-text-blue">
             <img 
                 src="assets/meily-logo-square.webp" 
                 alt="Meily Trips Logo" 
@@ -144,7 +133,7 @@
             target="_blank" 
             rel="noopener"
             onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
-            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
+            class="cta-button-blue text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
             <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
             </a>
 
@@ -154,7 +143,7 @@
             target="_blank" 
             rel="noopener"
             onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
-            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
+            class="cta-button-blue text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-1 font-bold">
             <img src="assets/apple_logo_black.webp" alt="iOS" class="w-6 h-6 mb-1"> iOS
             </a>
 
@@ -185,14 +174,14 @@
             <!-- GOOGLE-PLAY-LINK -->
         <a href="https://play.google.com/store/apps/details?id=com.meily.app" target="_blank" rel="noopener"
             onclick="gtag('event','store_click',{'store':'google_play','location':'top_bar'});"
-            class="cta-button text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
+            class="cta-button-blue text-black px-5 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
             <img src="assets/playstore_logo.webp" alt="Android" class="w-5 h-5"> Android
             </a>
 
             <!-- APP-STORE-LINK -->
         <a href="https://apps.apple.com/us/app/meily-trips/id6758970869" target="_blank" rel="noopener"
             onclick="gtag('event','store_click',{'store':'app_store','location':'top_bar'});"
-            class="cta-button text-black px-7 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
+            class="cta-button-blue text-black px-7 py-2 rounded-full hover:scale-105 transition flex items-center gap-2 font-bold">
             <img src="assets/apple_logo_black.webp" alt="iOS" class="w-5 h-5"> iOS
             </a>
 
@@ -236,7 +225,7 @@
         <a href="https://play.google.com/store/apps/details?id=com.meily.app"
             target="_blank" 
             rel="noopener"
-            class="cta-button-down inline-flex items-center text-black px-12 py-6 rounded-full hover:scale-105 transition-transform"
+            class="cta-button-white inline-flex items-center text-black px-12 py-6 rounded-full hover:scale-105 transition-transform"
             onclick="gtag('event', 'store_click', {
                 'store': 'google_play',
                 'location': 'cta_section',
@@ -253,7 +242,7 @@
         <a href="https://apps.apple.com/us/app/meily-trips/id6758970869"
             target="_blank" 
             rel="noopener"
-            class="cta-button-down inline-flex items-center text-black px-12 py-6 rounded-full hover:scale-105 transition-transform"
+            class="cta-button-white inline-flex items-center text-black px-12 py-6 rounded-full hover:scale-105 transition-transform"
             onclick="gtag('event', 'store_click', {
                 'store': 'app_store',
                 'location': 'cta_section',
