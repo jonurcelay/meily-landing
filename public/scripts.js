@@ -66,7 +66,7 @@ sections.forEach(section => observer.observe(section));
 });
 
  // JS for loading sidebar from external file
-fetch('how_to_pages/how_to_sidebar.html')
+fetch('/how_to_pages/how_to_sidebar.html')
     .then(response => {
         if (!response.ok) throw new Error('Sidebar not found');
         return response.text();
@@ -130,3 +130,53 @@ fetch('how_to_pages/how_to_sidebar.html')
         document.querySelector('.sidebar-container').innerHTML = 
         '<p class="text-red-500 p-4">Failed to load sidebar. Refresh page.</p>';
     });
+
+// Script for adding email to waitlist
+document.querySelector('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    try {
+    const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+        document.getElementById('success-msg').classList.remove('hidden');
+        form.reset();
+    } else {
+        alert('Something went wrong – try again!');
+    }
+    } catch (error) {
+    alert('Network error – please check your connection.');
+    }
+});
+
+// JS for countdown timer
+    
+// Set your launch date here (YYYY, MM-1, DD, HH, MM, SS)
+const launchDate = new Date(2026, 2, 17, 10, 0, 0).getTime(); // Example: March 6, 2026, 10:00 AM
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate - now;
+
+    if (distance < 0) {
+    document.getElementById("countdown").innerHTML = "<span class='text-3xl md:text-5xl'>We're Live! 🎉</span>";
+    return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+}
+
+// Update every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call

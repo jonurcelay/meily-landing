@@ -112,7 +112,7 @@ html {
 .sidebar a.active {
     color: #04a8e8;
     font-weight: 700;
-    background: #d0f2ff;
+    background: #ddf5ff; /* light blue: #d0f2ff */
 }
 
 .sidebar a:hover {

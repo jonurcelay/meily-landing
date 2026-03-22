@@ -56,65 +56,13 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4ZPF7PL0Q"></script>
+
 </head>
 
-
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M4ZPF7PL0Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-M4ZPF7PL0Q');
-</script>
-
-
-<!-- JS for hamburger -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamIcon = document.getElementById('ham-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    // Toggle menu open/close
-    hamburger.addEventListener('click', (e) => {
-      e.stopPropagation(); // prevent triggering document click
-      mobileMenu.classList.toggle('hidden');
-      hamIcon.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking any link (so it actually navigates!)
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        hamIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      });
-    });
-
-    // Close when clicking outside the menu
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        hamIcon.classList.remove('hidden');
-        closeIcon.classList.add('hidden');
-      }
-    });
-
-    // Prevent menu from closing when clicking inside it
-    mobileMenu.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-
-  });
-</script>
-
-
+<script src="/scripts.js" defer></script>
 
 <body class="bg-white">
 
