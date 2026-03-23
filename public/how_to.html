@@ -151,12 +151,11 @@
 
 
     <!-- Content Section with Sidebar Layout -->
-    <section class="content-bg min-h-screen pt-28 pb-10 flex flex-col">
-
-        <div class="mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-10 h-full items-stretch">
+    <section class="content-bg min-h-screen pt-28 pb-10">
+        <div class="container mx-auto flex flex-col md:flex-row gap-8 md:gap-12 px-10">
 
             <!-- LEFT SIDEBAR – dynamically loaded -->
-            <div class="sidebar-container md:w-72 lg:w-80 md:h-full items-stretch max-h-none"></div>
+            <div class="sidebar-container md:w-72 lg:w-80 flex-shrink-0"></div>
     
 
             <!-- MAIN CONTENT – Scrollable sections -->
@@ -249,7 +248,8 @@
                     </p>
 
                     <a href="how_to_pages/1_trip_itineraries/1_trips.html"
-                        class="inline-flex items-center cta-button-blue text-black text-xl px-5 py-2 rounded-full items-center gap-1 font-bold transition-all duration-300 transform hover:scale-105">
+                        class="inline-flex items-center cta-button-blue text-xl px-5 py-2 rounded-full items-center gap-1 font-bold transition-all duration-300 transform hover:scale-105"
+                        style="color: #04a8e8">
                         Start with 1. Trip Itineraries →
                     </a>
 
