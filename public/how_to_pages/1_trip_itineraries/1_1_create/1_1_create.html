@@ -205,7 +205,7 @@
 
                     <div class="grid grid-cols-2 md:grid-cols-4 mb-6 justify-items-start">
                         <div class="text-center">
-                            <img src="0_click_create.webp" 
+                            <img src="00_click_create.webp" 
                             alt="Meily Trips: Create New Trip: Tab on + Button" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -213,7 +213,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <img src="1_where.webp" 
+                            <img src="01_where.webp" 
                             alt="Meily Trips: Create New Trip: Choose Location" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -221,7 +221,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <img src="2_where.webp" 
+                            <img src="02_where.webp" 
                             alt="Meily Trips: Create New Trip: Choose Location" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -229,7 +229,7 @@
                         </div>
 
                         <div class="text-center">
-                            <img src="3_interests.webp" 
+                            <img src="03_interests.webp" 
                             alt="Meily Trips: Create New Trip: Choose Your Trip Preferences" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -240,7 +240,7 @@
 
                     <div class="grid grid-cols-2 md:grid-cols-4 mb-6 justify-items-start">
                         <div class="text-center">
-                            <img src="4_dates.webp" 
+                            <img src="04_dates.webp" 
                             alt="Meily Trips: Create New Trip: Choose Trip Dates" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -248,7 +248,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <img src="5_dates.webp" 
+                            <img src="05_dates.webp" 
                             alt="Meily Trips: Create New Trip: Choose Trip Dates" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -256,7 +256,7 @@
                         </div>
                         
                         <div class="text-center">
-                            <img src="6_dates.webp" 
+                            <img src="06_dates.webp" 
                             alt="Meily Trips: Create New Trip: Choose Trip Dates" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -264,7 +264,7 @@
                         </div>
 
                         <div class="text-center">
-                            <img src="7_transport.webp" 
+                            <img src="07_transport.webp" 
                             alt="Meily Trips: Create New Trip: Choose the Preferred Transport for the Trip" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -274,12 +274,12 @@
                     </div>
 
                     <p class="mb-0">
-                        Once all the previous trip options have been slected, the next screen will ask to choose
+                        Once all the previous trip options have been selected, the next screen will ask to choose
                         one of the three trip generation options, which are shown in the subsections below one by one.
                     </p>
 
                     <div class="text-center md:px-64 mb-6">
-                        <img src="8_choose.webp" 
+                        <img src="08_choose.webp" 
                             alt="Meily Trips: Create New Trip: Choose How To Create Trip" 
                             class="w-full rounded-lg object-cover" 
                             loading="lazy">
@@ -294,8 +294,46 @@
                     </h3>
 
                     <p class="mb-6">
-                        Content about AI itinerary creation...
+                        Choosing the first option, <strong>Generate with AI</strong>, will generate the trip itinerary
+                        automatically for you. When the trip is finished generating, the loader will disappear and the trip
+                        itinerary will be displayed on the map. Each color represents one day, and each day has several stops.
+                        See the pictures below.
                     </p>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 mb-6 justify-items-start">
+                        <div class="text-center">
+                            <img src="09_loading.webp" 
+                            alt="Meily Trips: Create New Trip with AI: Loading" 
+                            class="w-full rounded-lg object-cover" 
+                            loading="lazy">
+                            <p class="text-sm font-medium text-gray-600">Creating trip loader</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="10_trip_ai.webp" 
+                            alt="Meily Trips: Create New Trip with AI: Trip" 
+                            class="w-full rounded-lg object-cover" 
+                            loading="lazy">
+                            <p class="text-sm font-medium text-gray-600">Generated itinerary on map</p>
+                        </div>
+                        
+                        <div class="text-center">
+                            <img src="11_days_ai.webp" 
+                            alt="Meily Trips: Create New Trip with AI: Days" 
+                            class="w-full rounded-lg object-cover" 
+                            loading="lazy">
+                            <p class="text-sm font-medium text-gray-600">Generated days overview</p>
+                        </div>
+
+                        <div class="text-center">
+                            <img src="12_stops.webp" 
+                            alt="Meily Trips: Create New Trip with AI: Stops" 
+                            class="w-full rounded-lg object-cover" 
+                            loading="lazy">
+                            <p class="text-sm font-medium text-gray-600">Generated stops inside first day</p>
+                        </div>
+                        
+                    </div>
 
                     <!-- 1.1.2. From Posts -->
                     <h3 id="post-itinerary" class="text-2xl font-bold mt-8 mb-3" style="color: #04a8e8">
@@ -303,8 +341,16 @@
                     </h3>
 
                     <p class="mb-6">
-                        Content about itinerary creation from posts...
+                        The second option, <strong>Scan my posts</strong>, will let you choose from your scanned posts related to
+                        the chosen destination for the trip. If no posts have been previously scanned for the chosen destination,
+                        you can also directly paste the link of the post. This option will analyze the chosen posts (or pasted link),
+                        and will generate a trip itinerary taking into account the stops mentioned in the video. If the video 
+                        fails to mention any relevant stop point in the chosen destination, Meily will also add them to the 
+                        itinerary. For more details on how to scan posts and save them into the app, see 
+                        <a href="../../2_posts/2_posts.html" class="font-bold hover:underline" style="color: #04a8e8">section 2. Posts</a>
                     </p>
+
+                    
 
                     <!-- 1.1.3. Manually -->
                     <h3 id="manual-itinerary" class="text-2xl font-bold mt-8 mb-3" style="color: #04a8e8">
