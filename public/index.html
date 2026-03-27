@@ -217,8 +217,8 @@
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Scan posts, create trips,</h1>
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">& travel with your guides</h1>
       -->
-      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Easily plan your</h1>
-      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">trip itinerararies</h1>
+      <h1 class="text-3xl md:text-6xl font-bold md:mb-3">Easily plan your</h1>
+      <h1 class="text-3xl md:text-6xl font-bold md:mb-3">trip itinerararies</h1>
     </div>
 
     <!-- Launching Soon Banner -->
@@ -290,13 +290,23 @@
     </div>
     -->
 
-    <!-- VIDEO  -->
+    <!-- Video: laptop/phone  -->
     <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mt-20 mb-12 bg-white">
+        <!-- Video: laptop  -->
         <video autoplay muted loop playsinline 
-            class="w-full object-cover bg-white" 
+            class="hidden md:flex w-full object-cover bg-white" 
             poster="assets/meily-preview.webp" 
             preload="metadata">
             <source src="assets/video/meily.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Video: phone  -->
+        <video autoplay muted loop playsinline 
+            class="md:hidden w-full object-cover bg-white" 
+            poster="assets/meily-preview.webp" 
+            preload="metadata">
+            <source src="assets/video/meily_phone.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
