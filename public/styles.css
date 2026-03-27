@@ -8,6 +8,14 @@ html {
     scroll-behavior: smooth !important;
 }
 
+video {
+    display: block; /* Ensures video is block-level for centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*----------------------------------------------------------*/
 
 .cta-button-green {
     background-color: #6fc573;

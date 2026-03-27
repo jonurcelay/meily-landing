@@ -180,3 +180,27 @@ function updateCountdown() {
 // Update every second
 setInterval(updateCountdown, 1000);
 updateCountdown(); // Initial call
+
+// Fix video autoplay on iOS & modern Chrome
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('video');
+    
+    // Critical: playsinline + muted + poster
+    video.muted = true;
+    video.playsInline = true;
+
+    // Start playing (even if silent)
+    video.play().catch(() => {
+    // If autoplay fails, show poster + play button overlay
+    video.style.background = '#000 url("assets/tourist-guide-ai-preview.webp"") center/cover';
+    video.controls = true;
+    });
+
+    // Unmute + full play on first tap/click
+    document.body.addEventListener('click', function unmute() {
+    video.muted = false;
+    video.play();
+    document.body.removeEventListener('click', unmute);
+    }, { once: true });
+});
+

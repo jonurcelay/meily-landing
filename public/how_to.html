@@ -17,6 +17,19 @@
     "image": "https://meily.app/assets/meily-logo-square.webp"
   }
   </script>
+
+  <!-- VideoObject Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Meily Trips App",
+    "description": "Plan Your Travel Itineraries Instantly with AI or from Social Media Posts",
+    "thumbnailUrl": "https://meily.app/assets/meily-preview.webp",
+    "uploadDate": "2025-10-17",
+    "contentUrl": "https://meily.app/assets/video/meily.mp4"
+  }
+  </script>
   
   <meta name="description" content="How to use Meily Trips: create full travel itineraries, scan videos from social media to create a trip, and create your customed tourist guides.">
   <meta name="keywords" content="how to create travel itineraries, how to organize trip, tips to plan trip, how to create trip with AI, creating a trip itinerary">
@@ -162,11 +175,23 @@
             <main class="flex-1 prose prose-lg max-w-none text-gray-800 pb-4">
 
                 <div class="scroll-mt-28">
+
+                    <!-- VIDEO  -->
+                    <div class="container mx-auto flex flex-col justify-center items-center">
+                        <video autoplay muted loop playsinline 
+                            class="w-full full-w-md rounded-lg" 
+                            poster="assets/video/meily.mp4" 
+                            preload="metadata">
+                            <source src="assets/video/meily.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
                     <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" style="color: #04a8e8">
                         How to Use Meily Trips
                     </h1>
                     <p class="text-xl mb-3">
-                        Your complete guide to planning trips — from AI-powered itineraries to scanning social posts and creating personal tourist guides.
+                        Your complete guide to planning trips: from AI-powered itineraries to scanning social posts and creating personal tourist guides.
                     </p>
                     
                     <div class="grid grid-cols-3 md:pr-64 mb-6 justify-items-start">
@@ -197,10 +222,15 @@
                     </div>
 
                     <p class="mb-3">
-                        The main motivation for building Meily Trips is to solve the huge organizational mess that travelers suffer:
+                        The main motivation for building Meily Trips is to solve the
+                        <strong>huge mess that travelers suffer when organizing a trip:</strong>  
                         endless notes, saved posts from social media, google maps pins, open conversations with an AI model,
-                        different windows in the browser, etc. Just to think about it makes you feel stressed, when vacations
-                        are exactly for the opposite: for relaxing and enjoying.
+                        different windows in the browser, etc.
+                    </p>
+
+                    <p class="mb-3">
+                        Just to think about it makes you feel stressed, when vacations
+                        are exactly for the opposite: relaxing and enjoying.
                     </p>
 
                     <p class="mb-6">
