@@ -8,10 +8,17 @@ html {
     scroll-behavior: smooth !important;
 }
 
+/*
 video {
-    display: block; /* Ensures video is block-level for centering */
+    display: block;  Ensures video is block-level for centering 
     margin-left: auto;
     margin-right: auto;
+}
+*/
+
+video {
+    display: block;           /* Important */
+    margin: auto;
 }
 
 

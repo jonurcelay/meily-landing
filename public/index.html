@@ -61,6 +61,30 @@
 
 <script src="/scripts.js" defer></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('video');
+        
+        // Critical: playsinline + muted + poster
+        video.muted = true;
+        video.playsInline = true;
+
+        // Start playing (even if silent)
+        video.play().catch(() => {
+        // If autoplay fails, show poster + play button overlay
+        video.style.background = '#000 url("assets/tourist-guide-ai-preview.webp"") center/cover';
+        video.controls = true;
+        });
+
+        // Unmute + full play on first tap/click
+        document.body.addEventListener('click', function unmute() {
+        video.muted = false;
+        video.play();
+        document.body.removeEventListener('click', unmute);
+        }, { once: true });
+    });
+</script>
+
 <body class="bg-white">
 
   <!-- Background with world map + blue overlay -->
@@ -101,7 +125,7 @@
       <div class="hidden md:flex gap-3">
 
         <!-- Text link - HOW IT WORKS – smooth scroll -->
-        <a href="#how-it-works" 
+        <a href="how_to.html" 
           class="text-white hover:text-black hover:font-bold font-semibold px-3 py-2
                 transition-all duration-300 whitespace-nowrap flex items-center gap-4">
           HOW IT WORKS
@@ -154,7 +178,7 @@
   <!-- Mobile menu (hidden by default) -->
   <div id="mobile-menu" class=" z-10 fixed left-0 right-0 top-0 bg-blue-50 bg-opacity-50 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10 pt-20">
     
-    <a href="#how-it-works" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
+    <a href="how_to.html" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
     <!-- <a href="#reviews" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a> -->
 
@@ -189,8 +213,12 @@
 
     <!-- Title -->
     <div class="text-center md:text-center md:px-30 pt-10 md:pt-20 text-white">
+      <!--
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Scan posts, create trips,</h1>
       <h1 class="text-4xl md:text-6xl font-bold md:mb-3">& travel with your guides</h1>
+      -->
+      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Easily plan your</h1>
+      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">trip itinerararies</h1>
     </div>
 
     <!-- Launching Soon Banner -->
@@ -262,6 +290,17 @@
     </div>
     -->
 
+    <!-- VIDEO  -->
+    <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mt-20 mb-12 bg-white">
+        <video autoplay muted loop playsinline 
+            class="w-full object-cover bg-white" 
+            poster="assets/meily-preview.webp" 
+            preload="metadata">
+            <source src="assets/video/meily.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
     <!-- Main image -->
     <div class="text-center md:px-40 py-10">
       <img src="assets/index/main_image.webp" alt="Meily Trips" loading="lazy">

@@ -57,6 +57,30 @@
 
 <script src="/scripts.js" defer></script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.querySelector('video');
+        
+        // Critical: playsinline + muted + poster
+        video.muted = true;
+        video.playsInline = true;
+
+        // Start playing (even if silent)
+        video.play().catch(() => {
+        // If autoplay fails, show poster + play button overlay
+        video.style.background = '#000 url("assets/tourist-guide-ai-preview.webp"") center/cover';
+        video.controls = true;
+        });
+
+        // Unmute + full play on first tap/click
+        document.body.addEventListener('click', function unmute() {
+        video.muted = false;
+        video.play();
+        document.body.removeEventListener('click', unmute);
+        }, { once: true });
+    });
+</script>
+
 <body class="bg-white">
 
     <!-- --------- Top Bar Section -> JS for hamburger ------------------- -->
@@ -80,7 +104,7 @@
         <div class="hidden md:flex gap-3">
 
             <!-- Text link - HOW IT WORKS – smooth scroll -->
-            <a href="index.html" 
+            <a href="how_to.html" 
             class="hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold px-3 py-2
                     transition-all duration-300 whitespace-nowrap flex items-center gap-4">
             HOW IT WORKS
@@ -131,7 +155,7 @@
     <!-- Mobile menu (hidden by default) -->
     <div id="mobile-menu" class="z-40 fixed left-0 right-0 top-10 bg-white hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10">
         
-        <a href="index.html" class="block text-black hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
+        <a href="how_to.html" class="block text-black hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
         <a href="index.html" class="block text-black hover:text-blue-400 hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a>
 
@@ -177,19 +201,20 @@
                 <div class="scroll-mt-28">
 
                     <!-- VIDEO  -->
-                    <div class="container mx-auto flex flex-col justify-center items-center">
+                    <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mb-12 bg-white">
                         <video autoplay muted loop playsinline 
-                            class="w-full full-w-md rounded-lg" 
-                            poster="assets/video/meily.mp4" 
+                            class="w-full object-cover bg-white" 
+                            poster="assets/meily-preview.webp" 
                             preload="metadata">
                             <source src="assets/video/meily.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
 
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight" style="color: #04a8e8">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4" style="color: #04a8e8">
                         How to Use Meily Trips
                     </h1>
+                    
                     <p class="text-xl mb-3">
                         Your complete guide to planning trips: from AI-powered itineraries to scanning social posts and creating personal tourist guides.
                     </p>
