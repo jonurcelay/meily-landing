@@ -200,13 +200,23 @@
 
                 <div class="scroll-mt-28">
 
-                    <!-- VIDEO  -->
-                    <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mb-12 bg-white">
+                    <!-- Video: laptop/phone  -->
+                    <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mt-6 md:mt-20 mb-12 bg-white">
+                        <!-- Video: laptop  -->
                         <video autoplay muted loop playsinline 
-                            class="w-full object-cover bg-white" 
+                            class="hidden md:flex w-full object-cover bg-white" 
                             poster="assets/meily-preview.webp" 
                             preload="metadata">
                             <source src="assets/video/meily.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <!-- Video: phone  -->
+                        <video autoplay muted loop playsinline 
+                            class="md:hidden w-full object-cover bg-white" 
+                            poster="how_to_pages/1_trip_itineraries/1_1_create/10_trip_ai.webp" 
+                            preload="metadata">
+                            <source src="assets/video/meily_phone.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
