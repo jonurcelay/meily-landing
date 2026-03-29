@@ -61,30 +61,6 @@
 
 <script src="/scripts.js" defer></script>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const video = document.querySelector('video');
-        
-        // Critical: playsinline + muted + poster
-        video.muted = true;
-        video.playsInline = true;
-
-        // Start playing (even if silent)
-        video.play().catch(() => {
-        // If autoplay fails, show poster + play button overlay
-        video.style.background = '#000 url("assets/tourist-guide-ai-preview.webp"") center/cover';
-        video.controls = true;
-        });
-
-        // Unmute + full play on first tap/click
-        document.body.addEventListener('click', function unmute() {
-        video.muted = false;
-        video.play();
-        document.body.removeEventListener('click', unmute);
-        }, { once: true });
-    });
-</script>
-
 <body class="bg-white">
 
   <!-- Background with world map + blue overlay -->
@@ -176,7 +152,7 @@
   </div>
   
   <!-- Mobile menu (hidden by default) -->
-  <div id="mobile-menu" class=" z-10 fixed left-0 right-0 top-0 bg-blue-50 bg-opacity-50 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10 pt-20">
+  <div id="mobile-menu" class=" z-10 fixed left-0 right-0 top-0 bg-blue-800 bg-opacity-50 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10 pt-20">
     
     <a href="how_to.html" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
@@ -209,16 +185,19 @@
 
 
   <!-- Content -->
-  <section class="relative pt-20 px-10 md:px-40">
+  <section class="relative pt-20 px-10 md:px-40 justify-center">
 
     <!-- Title -->
-    <div class="text-center md:text-center md:px-30 pt-10 md:pt-20 text-white">
-      <!--
-      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">Scan posts, create trips,</h1>
-      <h1 class="text-4xl md:text-6xl font-bold md:mb-3">& travel with your guides</h1>
-      -->
-      <h1 class="text-3xl md:text-6xl font-bold md:mb-3">Easily plan your</h1>
-      <h1 class="text-3xl md:text-6xl font-bold md:mb-3">trip itinerararies</h1>
+    <div class="text-center md:px-30 pt-10 md:pt-20 text-white mb-4">
+      
+      <h1 class="text-5xl md:text-7xl font-bold mb-5">
+        Easily plan your trips
+      </h1>
+
+      <h2 class="text-3xl md:text-4xl">
+        Clean and organized itineraries
+      </h2>
+
     </div>
 
     <!-- Launching Soon Banner -->
@@ -289,95 +268,252 @@
 
     </div>
     -->
-
-    <!-- Video: laptop/phone  -->
-    <div class="overflow-hidden mx-auto max-w-4xl rounded-2xl mt-6 md:mt-20 mb-12 bg-white">
-        <!-- Video: laptop  -->
-        <video autoplay muted loop playsinline 
-            class="hidden md:flex w-full object-cover bg-white" 
-            poster="assets/meily-preview.webp" 
-            preload="metadata">
-            <source src="assets/video/meily.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <!-- Video: phone  -->
-        <video autoplay muted loop playsinline 
-            class="md:hidden w-full object-cover bg-white" 
-            poster="how_to_pages/1_trip_itineraries/1_1_create/10_trip_ai.webp" 
-            preload="metadata">
-            <source src="assets/video/meily_phone.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
     
     <!-- Main image -->
+     <!--
     <div class="text-center md:px-40 py-10">
       <img src="assets/index/main_image.webp" alt="Meily Trips" loading="lazy">
     </div>
+    -->
 
-    <!-- Container Feature 1: Scan posts -->
-    <div class="md:px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20" id="how-it-works">
-      <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
+    <!-- Three-Column Image Grid: Laptop -->
+    <div class="hidden md:grid mx-auto max-w-4xl mb-4 grid grid-cols-3">
+      
+        <img src="how_to_pages/1_trip_itineraries/1_1_create/16_map.webp" 
+        alt="Trip Itinerary on Map - Meily Trips" 
+        class="w-full max-w-48 rounded-lg object-cover" 
+        loading="lazy">
+
+        <img src="how_to_pages/1_trip_itineraries/1_1_create/17_days.webp" 
+        alt="Trip Itinerary Overview - Meily Trips"
+        class="w-full max-w-48 rounded-lg object-cover" 
+        loading="lazy">
+
+        <img src="how_to_pages/1_trip_itineraries/1_1_create/18_stops.webp" 
+        alt="Trip Itinerary Stops - Meily Trips"
+        class="w-full max-w-48 rounded-lg object-cover" 
+        loading="lazy">
+      
+    </div>
+
+     <!-- Three Image Carrousel: Phone -->
+    <div class="md:hidden -mx-10">
+        <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
+
+          <!-- Same 3 images, but now inside carousel -->
+          <div class="w-full max-w-48 flex-shrink-0 snap-center">
+
+            <img src="how_to_pages/1_trip_itineraries/1_1_create/16_map.webp" 
+            alt="Trip Itinerary on Map - Meily Trips" 
+            class="w-full rounded-lg object-cover" 
+            loading="lazy">
+
+          </div>
+
+          <div class="w-full max-w-48 flex-shrink-0 snap-center">
+            
+            <img src="how_to_pages/1_trip_itineraries/1_1_create/17_days.webp" 
+            alt="Trip Itinerary Overview - Meily Trips"
+            class="w-full rounded-lg object-cover" 
+            loading="lazy">
+
+          </div>
         
+          <div class="w-full max-w-48 flex-shrink-0 snap-center">
+            
+            <img src="how_to_pages/1_trip_itineraries/1_1_create/18_stops.webp" 
+            alt="Trip Itinerary Stops - Meily Trips"
+            class="w-full rounded-lg object-cover" 
+            loading="lazy">
+
+          </div>
+
+        </div>
+    </div>
+
+    <!-- Subtitle -->
+    <div class="text-center md:px-30 text-white mb-16">
+
+      <h2 class="text-5xl md:text-7xl font-bold md:mb-3">
+        No more travel mess
+      </h2>
+
+    </div>
+
+    <!-- Container Feature 1: Create Trips with AI -->
+    <div class="mx-auto max-w-4xl mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20">
+      <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
+
         <!-- Left: Image -->
-        <div class="flex justify-center">
+        <div class="hidden md:grid grid-cols-2 justify-center">
           <img 
-            src="assets/index/feature_1_posts.webp" 
-            alt="Scan Posts & Create Trips" 
-            class="w-48 md:w-full md:max-w-lg object-cover"
+            src="how_to_pages/1_trip_itineraries/1_1_create/03_interests.webp" 
+            alt="Create Trips with AI: Choose Interests" 
+            class="md:w-full md:max-w-3xl object-cover"
+            loading="lazy"
+          >
+          <img 
+            src="how_to_pages/1_trip_itineraries/1_1_create/08_choose.webp" 
+            alt="Create Trips with AI: Choose Generation Option" 
+            class="md:w-full md:max-w-3xl object-cover"
             loading="lazy"
           >
         </div>
 
+        <!-- Mores Images Carrousel: Phone -->
+        <div class="md:hidden -mx-10">
+            <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
+
+              <!-- Images inside carousel -->
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/02_where.webp" 
+                  alt="Create Trips with AI: Choose Where to Go" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/03_interests.webp" 
+                  alt="Create Trips with AI: Choose Interests" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/06_dates.webp" 
+                  alt="Create Trips with AI: Choose Dates" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/07_transport.webp" 
+                  alt="Create Trips with AI: Choose Transport" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/08_choose.webp" 
+                  alt="Create Trips with AI: Choose Generation Option" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/1_trip_itineraries/1_1_create/10_trip_ai.webp" 
+                  alt="Create Trips with AI: Created Trip Itinerary" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+            </div>
+        </div>
+
         <!-- Right: Text -->
-        <div class="text-white space-y-1 md:space-y-6">
-          <h3 class="text-xl md:text-4xl font-bold text-white">
-            Scan Posts & Create Trips
+        <div class="space-y-1 md:space-y-6">
+          <h3 class="text-2xl md:text-4xl font-bold text-white">
+            Create Trips in a Few Clicks
           </h3>
-          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
-            Import posts from Instagram, TikTok, or YouTube. Meily Trips analyzes the stops from the content and builds the itinerary for you.
+          <p class="text-xl leading-relaxed opacity-90 text-white">
+            Choose where you want to go, how many days you have, and your trip preferences.
+            Meily will create a full itinerary for you.
           </p>
         </div>
 
       </div>
     </div>
 
-    <!-- Container Feature 2: Create Trips with AI -->
-     <div class="md:px-10 mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20">
+    <!-- Container Feature 2: Scan posts -->
+    <div class="mx-auto max-w-4xl rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20" id="how-it-works">
       <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
-
+        
         <!-- Left: Text -->
-        <div class="text-white space-y-1 md:space-y-6 order-2 md:order-1">
-          <h3 class="text-xl md:text-4xl font-bold text-white">
-            Create Trips in One Tap
+        <div class="space-y-1 md:space-y-6 order-2 md:order-1">
+          <h3 class="text-2xl md:text-4xl font-bold text-white">
+            Analyze Stops from Social Media
           </h3>
-          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
-            Choose where you want to go, how many days you have, and your trip preferences - Meily Trips will create a full itinerary for you.
+          <p class="text-xl md:text-xl leading-relaxed opacity-90 text-white">
+            Use posts from Instagram, TikTok, or YouTube. Meily Trips analyzes the stops from the content and builds the itinerary for you.
           </p>
         </div>
 
         <!-- Right: Image -->
-        <div class="flex justify-center order-1 md:order-2">
+        <div class="hidden md:grid grid-cols-2 justify-center order-1 md:order-2">
           <img 
-            src="assets/index/feature_2_ai.webp" 
-            alt="Create Trips with AI" 
-            class="w-48 md:w-full md:max-w-lg object-cover"
+            src="how_to_pages/2_posts/2_1_scan/00_share.webp" 
+            alt="Scan Posts & Create Trips: Share Post to Meily Trips" 
+            class="md:w-full md:max-w-3xl object-cover"
             loading="lazy"
           >
+          <img 
+            src="assets/index/feature_2_posts.webp" 
+            alt="Scan Posts & Create Trips" 
+            class="md:w-full md:max-w-3xl object-cover"
+            loading="lazy"
+          >
+        </div>
+
+        <!-- Mores Images Carrousel: Phone -->
+        <div class="md:hidden -mx-10">
+            <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
+
+              <!-- Images inside carousel -->
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/2_posts/2_1_scan/00_share.webp" 
+                  alt="Scan Posts & Create Trips: Share Post to Meily Trips" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="how_to_pages/2_posts/2_1_scan/01_scanning.webp" 
+                  alt="Scan Posts & Create Trips: Scanning Post for Itinerary Creation" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="assets/index/feature_2_posts.webp" 
+                  alt="Scan Posts & Create Trips: Scanned Days" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+
+            </div>
         </div>
 
       </div>
     </div>
 
     <!-- Container Feature 3: Travel with Your Guides -->
-     <div class="md:px-10 rounded-3xl overflow-hidden backdrop-blur-2xl 
+    <!--
+    <div class="mx-auto max-w-4xl rounded-3xl overflow-hidden backdrop-blur-2xl 
          bg-white bg-opacity-20">
       <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
         
-        <!-- Left: Image -->
+        <!- Left: Image ->
         <div class="flex justify-center">
           <img 
             src="assets/index/feature_3_guides.webp" 
@@ -387,8 +523,8 @@
           >
         </div>
 
-        <!-- Right: Text -->
-        <div class="text-white space-y-1 md:space-y-6">
+        <!- Right: Text ->
+        <div class="space-y-1 md:space-y-6">
           <h3 class="text-xl md:text-4xl font-bold text-white">
             Explore with Your Guides
           </h3>
@@ -398,7 +534,8 @@
         </div>
 
       </div>
-    </div>
+    </div> 
+  -->
 
   </section>
 
