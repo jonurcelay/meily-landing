@@ -101,7 +101,7 @@
       <div class="hidden md:flex gap-3">
 
         <!-- Text link - HOW IT WORKS – smooth scroll -->
-        <a href="how_to.html" 
+         <a href="#how-it-works" 
           class="text-white hover:text-black hover:font-bold font-semibold px-3 py-2
                 transition-all duration-300 whitespace-nowrap flex items-center gap-4">
           HOW IT WORKS
@@ -154,7 +154,7 @@
   <!-- Mobile menu (hidden by default) -->
   <div id="mobile-menu" class=" z-10 fixed left-0 right-0 top-0 bg-blue-800 bg-opacity-50 hidden md:hidden flex-col items-center justify-center space-y-5 text-l px-10 py-10 pt-20">
     
-    <a href="how_to.html" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
+    <a href="#how-it-works" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">HOW IT WORKS</a>
 
     <!-- <a href="#reviews" class="block text-white hover:text-black hover:scale-105 hover:font-bold font-semibold transition-all">REVIEWS</a> -->
 
@@ -334,7 +334,7 @@
     <!-- Subtitle -->
     <div class="text-center md:px-30 text-white mb-16">
 
-      <h2 class="text-5xl md:text-7xl font-bold md:mb-3">
+      <h2 class="text-5xl md:text-7xl font-bold md:mb-3" id="how-it-works">
         No more travel mess
       </h2>
 
@@ -342,7 +342,7 @@
 
     <!-- Container Feature 1: Create Trips with AI -->
     <div class="mx-auto max-w-4xl mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20">
+         bg-white bg-opacity-20" >
       <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
 
         <!-- Left: Image -->
@@ -439,7 +439,7 @@
 
     <!-- Container Feature 2: Scan posts -->
     <div class="mx-auto max-w-4xl rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20" id="how-it-works">
+         bg-white bg-opacity-20">
       <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
         
         <!-- Left: Text -->
@@ -507,36 +507,68 @@
       </div>
     </div>
 
-    <!-- Container Feature 3: Travel with Your Guides -->
-    <!--
-    <div class="mx-auto max-w-4xl rounded-3xl overflow-hidden backdrop-blur-2xl 
-         bg-white bg-opacity-20">
+    <!-- Container Feature 3: Offline maps -->
+    <div class="mx-auto max-w-4xl mb-16 rounded-3xl overflow-hidden backdrop-blur-2xl 
+         bg-white bg-opacity-20" >
       <div class="flex flex-col md:flex-row md:gap-8 p-8 md:p-12 items-center">
-        
-        <!- Left: Image ->
-        <div class="flex justify-center">
+
+        <!-- Left: Image -->
+        <div class="hidden md:grid grid-cols-2 justify-center">
           <img 
-            src="assets/index/feature_3_guides.webp" 
-            alt="Travel with Your Guides" 
-            class="w-48 md:w-full md:max-w-lg object-cover"
+            src="assets/index/feature_3_offline_trips.webp" 
+            alt="Offline trips: home page with offline map" 
+            class="md:w-full md:max-w-3xl object-cover"
+            loading="lazy"
+          >
+          <img 
+            src="assets/index/feature_3_offline_map.webp" 
+            alt="Offline trips: map with offline indicator" 
+            class="md:w-full md:max-w-3xl object-cover"
             loading="lazy"
           >
         </div>
 
-        <!- Right: Text ->
+        <!-- Same Images Carrousel: Phone -->
+        <div class="md:hidden -mx-10">
+            <div id="carousel" class="flex snap-x overflow-x-auto snap-mandatory scroll-smooth hide-scrollbar gap-6 px-5" style="scroll-snap-type:mandatory">
+
+              <!-- Images inside carousel -->
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="assets/index/feature_3_offline_trips.webp" 
+                  alt="Offline trips: home page with offline map" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+              <div class="w-full max-w-48 flex-shrink-0 snap-center">
+                <img 
+                  src="assets/index/feature_3_offline_map.webp" 
+                  alt="Offline trips: map with offline indicator" 
+                  class="md:w-full md:max-w-3xl object-cover"
+                  loading="lazy"
+                >
+              </div>
+
+            </div>
+        </div>
+
+        <!-- Right: Text -->
         <div class="space-y-1 md:space-y-6">
-          <h3 class="text-xl md:text-4xl font-bold text-white">
-            Explore with Your Guides
+          <h3 class="text-2xl md:text-4xl font-bold text-white">
+            Save Your Trips for Offline Use
           </h3>
-          <p class="text-md md:text-xl leading-relaxed opacity-90 text-white">
-            Send pictures, ask questions, and get real-time voice answers from your AI-powered tourist guides. Have a local expert for each of your destinations.
+          <p class="text-xl leading-relaxed opacity-90 text-white">
+            Once your trip is created, you can save it and use it offline.
+            Your itinerary and the map will be available even without internet connection.
           </p>
         </div>
 
       </div>
-    </div> 
-  -->
+    </div>
 
+    
   </section>
 
   <!-- Reviews Section (hidden for now) -->
@@ -732,7 +764,7 @@
         <div>
           <h3 class="text-lg font-bold mb-4">Product</h3>
           <ul class="space-y-3">
-            <li><a href="how_to.html" class="hover:underline transition-all">How It Works?</a></li>
+            <li><a href="#how-it-works" class="hover:underline transition-all">How It Works?</a></li>
             <!-- <li><a href="#reviews" class="hover:underline transition-all">Reviews</a></li> -->
             <li><a href="#download" class="hover:underline transition-all">Get the App</a></li>
             <li><a href="faq.html" class="hover:underline transition-all">FAQ's</a></li>
