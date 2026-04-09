@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start playing (even if silent)
     video.play().catch(() => {
     // If autoplay fails, show poster + play button overlay
-    video.style.background = '#000 url("assets/tourist-guide-ai-preview.webp"") center/cover';
+    video.style.background = '#000 url("assets/meily-preview.webp"") center/cover';
     video.controls = true;
     });
 
